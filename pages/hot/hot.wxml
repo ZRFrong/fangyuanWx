@@ -1,0 +1,24 @@
+<!--pages/register/register.wxml-->
+<view class="kongbao-head">
+	<view class="left-icon" bindtap="goback"></view>选择话题
+</view>
+<view class="pape">
+	<view class="search clearfix">
+		<form bindsubmit="formSubmit">
+			<input name="search" placeholder="搜索话题" placeholder-style="color:#4fe596" />
+			<image src="/image/search.png"></image>
+			<button form-type="submit" class="search_button">搜索</button>
+		</form>
+	</view>
+	<view class="list">
+		<view class="add" style="display:{{add}};">
+			<view class="top">创建新话题</view>
+			<view class="li" bindtap="choiceHot" data-name="{{addname}}">#{{addname}}</view>
+		</view>
+		<view class="hot">
+			<view class="top">热门话题</view>
+			<view class="li" wx:for="{{list}}" wx:key="index"  bindtap="choiceHot" data-id="{{item.id}}" data-name="{{item.name}}">#{{item.name}}</view>
+		</view>
+		
+	</view>
+</view>

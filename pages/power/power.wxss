@@ -1,0 +1,95 @@
+/* pages/register/register.wxss */
+.biaoti{
+  width: 100%;
+  line-height: 82rpx;
+  background-color: #49eebb;
+  color: #ffffff;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.logo{
+  width: 231rpx;
+  height: 213rpx;
+  margin: 0 auto;
+  margin-top: 105rpx;
+}
+
+.yuan{
+  width: 141rpx;
+  height: 141rpx;
+  border-radius: 50%;
+  margin: 0 auto;
+  display:block;
+}
+
+.shuoming{
+  color: #555555;
+  font-size: 28rpx;
+  margin-top: 46rpx;
+  text-align:center;
+}
+
+.shoujihao{
+  width: 690rpx;
+  margin: 0 auto;
+  border-bottom: 1rpx solid #e9e9e9;
+  margin-top: 100rpx;
+  height: 77rpx
+}
+
+.qianmian{
+  color: #000000;
+  font-size: 29.58rpx;
+}
+
+.zhongjian{
+  display: inline-block;
+  width: 23rpx;
+  height: 13rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAANCAYAAABCZ/VdAAABPklEQVQ4jaXRPyjncRzH8cfvWwaTMphkspqvKyVSv4TSnSslURK/Mioy6G3Q7TfcYrjFpqjruvOnlERhMLDxyyCTAV1ZbjjD96v06/fz8+O1fT6v9/v5/pfDJbYxif9qVESUvnNYRmeCc0zgW63gMoVy+I5xFBN8xhGmsfRO/ldM4RADCf4ijzPMY+6NXS9gFifIR8RDknl36MJFVr1QI3gGi1mD+Yi4h1xJXDP20YIRrLyCXZDuuYiOiLh+Mkrh0Io9NGEQ6y+Ah7MGrvExIq6em+Xg0IYdNKAfm2ViPmEVN2iPiIvSgEpw+IAt1EkPvvfM65VOdI+uiDgtB3gJDh34g3/oxrH08L+e/iLiuFJyUsnItCsdvx6/MYafmdeTFauoanDYwBAa8UO6pj4cVEt8DRzWMIpbfJEeu6oeAZVPTZABnm6pAAAAAElFTkSuQmCC) no-repeat;
+  background-size: 100% 100%;
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+
+.shoujihao input{
+  float: right;
+  width: 512rpx;
+  font-size: 35.5rpx;
+  color: #999999;
+}
+
+.yanzhengma{
+  width: 690rpx;
+  margin: 0 auto;
+  border-bottom: 1rpx solid #e9e9e9;
+  margin-top: 34rpx;
+  height: 77rpx
+}
+
+.yanzhengma input{
+  font-size: 35.5rpx;
+  color: #999999;
+  float: left;
+}
+
+.yanzhengma button{
+  border-radius: 30rpx;
+  width: 200rpx;
+  line-height: 52.09rpx;
+  background-color: #20e0a4;
+  float: right;
+  color: #ffffff;
+  font-size: 24.19rpx;
+}
+
+.qurren{
+  width: 590rpx;
+  line-height: 80rpx;
+  background-color: #20e0a4;
+  color: #ffffff;
+  font-size: 36rpx;
+  border-radius: 60rpx;
+  margin-top: 360rpx;
+}

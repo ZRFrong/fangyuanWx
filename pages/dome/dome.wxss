@@ -1,0 +1,89 @@
+page{
+  height: 100%;
+}
+
+.manage{
+  width: 100%;
+  height: 100%;
+  background-color: #e9e9e9;
+}
+
+.touch-item {
+ font-size: 30rpx;
+ display: flex;
+ /* //均匀排布每个元素 */
+ justify-content: space-between;
+ border-bottom:1px solid #e9e9e9;
+ width: 100%;
+ overflow: hidden;
+ background-color: #ffffff;
+}
+.touch-item:first-child{border-top:2px solid #e9e9e9;}
+.content {
+ width: 100%;
+ padding: 10px;
+ line-height: 22px;
+ margin-right:0;
+ -webkit-transition: all 0.4s;
+ transition: all 0.4s;
+ -webkit-transform: translateX(90px);
+ transform: translateX(90px);
+ margin-left: -90px;
+}
+.del {
+ background-color: #f24747;
+ width: 90px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ color: #fff;
+ -webkit-transform: translateX(90px);
+ transform: translateX(90px);
+ -webkit-transition: all 0.4s;
+ transition: all 0.4s;
+}
+.touch-move-active .content,
+.touch-move-active .del {
+ -webkit-transform: translateX(0);
+ transform: translateX(0);
+}
+.tianjiatudi{
+  width: 100%;
+  line-height: 82rpx;
+  text-align: center;
+  background-color: #fff;
+  color: #41ebb6;
+  font-size: 30rpx;
+  margin-top: 40rpx;
+}
+
+.wancheng{
+  width: 690rpx;
+  line-height: 80rpx;
+  background-color: #20e0a4;
+  color: #ffffff;
+  font-size: 36rpx;
+  border-radius: 60rpx;
+  margin-top: 105rpx;
+  position: absolute;
+  bottom: 100rpx;
+  left: 30rpx;
+}
+
+.gfk{
+  float: right;
+  font-size: 26rpx;
+  color: #b8b8b8;
+}
+
+.dlf{
+  float: right;
+  width: 15rpx;
+  height: 26rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAaCAYAAABozQZiAAABkElEQVQ4jZ3UMUiVURjG8X/p2tIiwoGEblMiNChPXCcFQVoq00HMQWiQaGjIBuGCNLmJg0QUIRaSEIiD3IaMFnkGBzFBUMfvbkG0mS0N93xyb+r1XN/lcPjO73nf7wznSrlcngeObE/RZF0FHgEvJC1eBhcAA+OS1prBLYVC4W+WZe9CCF3A/RDCvRDCcpZlxymdAbA9BLwHuoEfktqScQyYAF4BHcCBpNvJOAaUgOfANWBXUl8yjgFzwGjcfpU0nIxjwDKQd12R9CwZx4BvVC/wDzAvaSYZx4At4CaQASVJb5JxDKgAncA28ETS52QcA37bvgO8BR5K2knGNVWJ663WZpSkT8AIsAMUk7GkL8AAsAEM2j6+EEu6DnynemEfbY/l3xr+s6QbwG6EC7WwIZbUAxwC7cC07af/nzlzbEmDwHrcTtp+fda5U1jSOJA/SQ9sr543Xd3Ykl7WwN5GsK6zpFlgCvgFFG3vNYInWNISMAbsR/jzIgjQKmkTuAtsAv22j1Jg3rkCfLD9OBXl9Q8u8oejzpslvQAAAABJRU5ErkJggg==) no-repeat;
+  background-size: 100% 100%;
+  margin-top: 9rpx;
+  margin-left: 9rpx;
+}
+.bg{background:#e9e9e9;height:100%;}

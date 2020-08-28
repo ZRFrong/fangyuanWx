@@ -1,0 +1,1323 @@
+/* pages/dome/dome.wxss */
+
+/* pages/farmland/farmland.wxss */
+
+.kongbao-head {
+  height: 150rpx;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.land .land_li .bottom .equipment .control_ul .control_li .ulli .nonemove {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 0 10rpx #dedede;
+  background: #dedede;
+  color: #999;
+  margin: 0 auto;
+}
+
+.pape {
+  background: #f5f5f5;
+  padding-top: 136rpx;
+  z-index: 1;
+  min-height: calc(100vh - 136rpx);
+}
+
+.swipers {
+  position: relative;
+}
+
+swiper {
+  width: 100%;
+  height: 370rpx;
+}
+
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper .wx-swiper-dot {
+  width: 15rpx;
+  height: 15rpx;
+  background: white;
+  border-radius: 15rpx;
+  margin-bottom: 100rpx;
+}
+
+/* 选中指示点的样式 */
+
+.swiper .wx-swiper-dot.wx-swiper-dot-active {
+  width: 15rpx;
+  height: 15rpx;
+  background: #1edfa3;
+  border-radius: 15rpx;
+}
+
+.biaoti {
+  color: #fff;
+  font-size: 58rpx;
+  position: absolute;
+  top: 58rpx;
+  left: 44rpx;
+}
+
+.weizhi {
+  position: absolute;
+  width: 18rpx;
+  height: 24rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAVCAYAAAB2Wd+JAAABkklEQVQ4jYWUv2sVURCFv13hERAUE4lgbxrTGGxS+eCBFlrlb0hIqQSxdO5YpxCxF1JKSJPu8fAfUAR/QCSKabQxUREx0ZBwLN5dHa+blwMDd8+cjzuws1ullGhkZmeAW8AcMJXtTWANuO/uX5tsHaAu8Ba4C0wDnVzT2ds0syt/bkkpIWlW0r6O1y9JsyklkNSRtNUS2s5VaktSB0kLReODpF5KqZmmJ+ljkVmoJA2AXp5cwGV3f06Qmc0Az4AqW/0auBQy/RICyN4gWDM1MB6MNyUUtBHOZ2vgIBiTI8Bz4bxfA6+Ccd3MJkrCzCaBG8F6XQPrwTgFrJrZeIAmgMfAyZBbrySdZ7hWsfEN6OfzVeB06P0ALpyoqup7t9vdA66F5hhwMddYMfkddx80u/qA4Xs6Tk+Bh5CX3N0PgXngcAR0AMzn7N+vw91fAMsjwGV3f9k81EXzHvC+BXoHeDT+Ad19F1hsARfd/eeRYIYHwEqwHrn7kzL3H5i1BOwAn4DbbYFW0N0/M/z33HT3L22Z340s+mXfkXafAAAAAElFTkSuQmCC) no-repeat;
+  background-size: 100% 100%;
+  top: 96rpx;
+  left: 175rpx;
+}
+
+.xiqi {
+  color: #fff;
+  font-size: 22.68rpx;
+  position: absolute;
+  top: 93rpx;
+  left: 195rpx;
+}
+
+.pingguodi {
+  color: #fff;
+  font-size: 22.68rpx;
+  position: absolute;
+  top: 98rpx;
+  left: 175rpx;
+}
+
+.tianshu {
+  color: #fff;
+  font-size: 22.68rpx;
+  position: absolute;
+  top: 70rpx;
+  right: 40rpx;
+}
+
+.xiala {
+  width: 33rpx;
+  height: 20rpx;
+  position: absolute;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAQCAYAAADqDXTRAAABh0lEQVQ4ja3SsWoUURQG4G8nkiJNmoQ8g7CVoK0kkqgxC4pJOlOIRSxsbYfzAhYKlhaRNBpFJYKmWBubbWIR0MY3MIWkCbiQsZi7MCzJZibsqQbunf+b8zOtoih6uIRb+KPhRESte3mez+IL+hnmcAVdzDZFG4Dd5MxlWMYh2viM6TGDMwlsK5tczPATCwm+ir1xwXmeTysXaaf8GxHxO0vnB7iJI1zDR0yNAdxLeYdYiIgDyCr39rGU4OvYvSic5/lUBTzC0gAcRqGHOzjGPN5i8gLg7hD4o3pnGIXvWEnwMnbqwhVwvgL2hu+dhlL+bffQRwevMXEOOIkPCTzG3dPAUSh8xWqC17F1FpzAHSwmcCUivp0V3CqKYtQCcB9v0ge+wiNUXxqAHfzD7Yjojgoctelg3mEDJ3iIl2ilswll9R1lI2vngXVR2E4gbOJZAreU1fexGhGf6oTVqbc6j5Wbwi9cVjawFhHv64Y0ReEJnqfnE2xExHaTgLr1VucFnuIvHjQF4T+ZtX9lv6PlzgAAAABJRU5ErkJggg==) no-repeat;
+  background-size: 100% 100%;
+  top: 105rpx;
+  right: 45rpx;
+}
+
+.kuang {
+  height: 132rpx;
+  width: 100%;
+  position: absolute;
+  top: 430rpx;
+}
+
+.kuang-center {
+  width: 670rpx;
+  height: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  box-shadow: 3px 3px 5px #dedede;
+  position: relative;
+}
+
+.kuang-left {
+  width: 25%;
+  height: 132rpx;
+}
+
+.left-xue {
+  display: inline-block;
+  height: 94rpx;
+  width: 94rpx;
+  background: url(data:image/png;base64,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) no-repeat;
+  background-size: 100% 100%;
+  margin-top: 20rpx;
+  margin-left: 43rpx;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.kuang-right {
+  width: 75%;
+  height: 82rpx;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.kuang-1 {
+  width: 27%;
+  height: 100%;
+  border-left: 1rpx solid #e4e4e4;
+  text-align: center;
+}
+
+.wewndu {
+  color: #9e9e9e;
+  font-size: 25.26rpx;
+}
+
+.shuzi {
+  color: #6fad00;
+  font-size: 35.43rpx;
+}
+
+.shuzi2 {
+  color: #6fad00;
+  font-size: 25rpx;
+}
+
+.kuang-2 {
+  width: 38%;
+  height: 100%;
+  border-left: 1rpx solid #e4e4e4;
+  text-align: center;
+}
+
+.main-1 {
+  width: 670rpx;
+  /* height: 805rpx; */
+  margin: 0 auto;
+  margin-top: 80rpx;
+  border-radius: 20rpx;
+  box-shadow: 2px 2px 4px 2px #f6f6f4;
+}
+
+.main-left {
+  width: 50%;
+  height: 100%;
+}
+
+.huangguashu {
+  display: inline-block;
+  color: #000;
+  font-size: 35.66rpx;
+  margin-left: 32rpx;
+  margin-top: 32rpx;
+}
+
+.m-1 {
+  margin-left: 18rpx;
+}
+
+.sgengyu {
+  color: #999;
+  font-size: 29.41rpx;
+  margin-left: 32rpx;
+}
+
+.duigou {
+  border-radius: 50%;
+  border: 1px solid #f3a266;
+  width: 37rpx;
+  height: 37rpx;
+  margin-left: 200rpx;
+  margin-top: 40rpx;
+}
+
+.duigouxuobi {
+  display: inline-block;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAUCAYAAABmvqYOAAABbElEQVQ4ja3VP0sdQRSH4cerKBaCRTBaiJUWESTp7NIE/ENsgo0pYiBVFGw0RSLYpBJFsUpARIlgIaRRtIhGkDSWdppPYGNjiqCCaLEjzL3uXq+4Bxbmt3t4Z2BezladLfTJuZ7jCX7X5AzuwRaq8bGQI7gJKwEMrXnBq7CE5pBPMJ8XfASvw/oawzjNA96JmSjPYwceC6/DGupDPsTn24+PhU+jK6z/4y0uY3g//mIRtQ8A92IsyhM4ihtqMImO8LTiTThFuWrCssQS2MC30qYCfka5B9toKANO0+5DWmMBc5iK3r3ELzRmwEu1e4fTLDh8xafQDN3Yk8yIuEq1m8NuxiGKbJnFaLTBC+yjJeQ07b5kgUvhJJfyHlchPwsbtLmr3ZBIu7RKm4o/cI5ViZrtOMDTqGccx+XAaSe/rXUM4iLkZsXafb8PXA4OmxhQ7Hymdg+FkwygXvwTTbtK4ZX8if7gVdhkp1Iw3ACaPEOWn4ABBgAAAABJRU5ErkJggg==) no-repeat;
+  background-size: 100% 100%;
+  width: 27rpx;
+  height: 20rpx;
+  margin-left: 5rpx;
+  margin-bottom: 10rpx;
+}
+
+.shebei {
+  color: #000;
+  font-size: 28.09rpx;
+  margin-left: 170rpx;
+}
+
+.main-2 {
+  width: 670rpx;
+  height: 154rpx;
+  margin: 0 auto;
+  margin-top: 23rpx;
+  border-radius: 20rpx;
+  box-shadow: 2px 2px 4px 2px #f6f6f4;
+}
+
+.main-head {
+  height: 127rpx;
+}
+
+.jiaoshui {
+  width: 627rpx;
+  height: 196rpx;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  box-shadow: 2px 2px 4px 2px #f6f6f4;
+  /* display: none; */
+}
+
+.m-23 {
+  margin-top: 23rpx;
+}
+
+.jiaoshui-center {
+  width: 551rpx;
+  height: 60rpx;
+  margin: 0 auto;
+  margin-top: 15rpx;
+}
+
+.jiaoshuiwen {
+  color: #003419;
+  font-size: 33.33rpx;
+}
+
+.yule {
+  width: 97rpx;
+  height: 40rpx;
+  border-radius: 40rpx;
+  background-color: #f5f5f9;
+  color: #5256e0;
+  font-size: 19.84rpx;
+  line-height: 40rpx;
+  text-align: center;
+  margin-top: 10rpx;
+  float: right;
+}
+
+.dian {
+  display: inline-block;
+  width: 13rpx;
+  height: 13rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAmklEQVQokZXRzQ1BQRSG4cdZoActSPws6AENUACWyqECDRBNiLgiOlCCBTYW5u783Psms/nm/SY5Zyr1y06iijnGaKbsjDWWeEAlFRrYoO0zR4xwjfTyL1m626IWmP2Rc1qYBiYF5JxJoFui0IkSMjwDhxKFc3jvuSjrwApZAfmEVeCOoffnfCPDAPd86Cv6WGCPWzr7lPWS4wWmnR/b92lTugAAAABJRU5ErkJggg==) no-repeat;
+  background-size: 100% 100%;
+}
+
+.kuang1 {
+  width: 33.33%;
+  height: 98rpx;
+  float: left;
+}
+
+.kuang-kuang {
+  width: 137rpx;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  box-shadow: 2px 2px 4px 2px #f6f6f4;
+  text-align: center;
+}
+
+.kuang-xuebi {
+  display: inline-block;
+  width: 33rpx;
+  height: 38rpx;
+  margin-top: 15rpx;
+}
+
+.kuang-text {
+  color: #34ae6f;
+  font-size: 20.47rpx;
+}
+
+.none1 {
+  height: 40rpx;
+  width: 100%;
+}
+
+.bj {
+  background-color: #7ffdbb;
+}
+
+@keyframes slidedown {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 240rpx;
+  }
+}
+
+@keyframes slideup {
+  from {
+    height: 240rpx;
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+.xuebi-1 {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAlCAYAAAC6TzLyAAABc0lEQVRYhcXWQUrcUADG8d/4Zqtr8QRV7zBgwDsoXqAUu6h2m9WsiuLOGwgKbl3asUeoUGS6lWEuoUO7GCJDJmgSX57/ZfKSP9/3QUgv5IMHTHCEPxqSh6zpIy+sYBO7+I0zrLV+Wwt5QcA3/MUBeinlBeu4wC9sp5YXDMynOMFqajn08R1j7KWWF2zgEiNspZYX7OBepCmayok4RS/kg3/veQHucJiH7KHpg22Sl9nB/XA2OhnORo2miCFnYYrhbFR7ihi1V1FriljJy9Saois5NaboqvYqlqboMnmZpSlSJl9kis8pky+ygfOPkk/wJbX8CT/wKQ/ZTT+h+BZf85CNiwsp5BMc5SG7Lt/osvbFipfEdJf8p/kHZfzaodjyKY7zkF3VORyr9mecmldcS0yc5K3/ZN4jb1RxFW1qf6kYrcU0T36HQzSuuIq6yafYRxZLXEcereIqXqs9asVVVCXvpOK35J1WXEXfPN0jjnWctMx/SZxrsYS1hLkAAAAASUVORK5CYII=) no-repeat;
+  background-size: 100% 100%;
+}
+
+.xuebi-2 {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAnCAYAAAALkrgzAAAA2ElEQVRIie3XIUuDQRwH4MdzFosMjCJYdWBdXzSJ1W9gsQgiYvMDWA3j7QaDBotB66ptbVoVk1ODGLzBwg1uwfb/wcHd7+4e3jfeQtM0SzjHAcbo4xTf6rKBS/TwjENct3CUByzn+SfOKtCEW2zm9Tqu0E3YK1zYqfzarSl0kkXsJqwWLpS6UlZm9O1UCcydgAMOOOCAAw444IAD/l+49CSofSZ8zeg/Eu4LG4+V8BNeC/1DwgkGU+UAx5XwGPt4z+sfXOCmhTd00fH3a8N8oDZ3WMM2RniBX9xsJV/Y8CSCAAAAAElFTkSuQmCC) no-repeat;
+  background-size: 100% 100%;
+}
+
+.xuebi-3 {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAD10lEQVRYhcXYW4iVVRgG4Mfd2ElNQa3Qi1YnkEmlg5UHYooOEFF5U2FEiQqREUaHqygLgroJajpAB2u6kIiIDhYRGZWZjtHBLGSgyHWhJRghZBllYxff2s6ePXvPjM44+4XFWv/617/+d52+9X3vuK6uLkeAObgc8zELMzERB7EPO9GDzfgY25t1lHNuWN92GGQm4nYsQ/sg7U7AdJyHJaVuG14qaf9wfjYcYm24Ew9iak39QfyA77FDzNS4MoAzMLdmAHPRiYdKeh69IyF2Nl4Xo69iA7rwDn4f4vvpWIylWIhpeA63idnc0ezDyiCdXodvakh9gQXowCvDIAV78CIWle++LPUXl76vOlxit+AtsSx/i711CbqHQaYZNoiBrcI/mIL3Uko3DJfY9Xi1vNtdOntB7KmRolfstQ78hvFYm1IaMHP1xGZhban/VczS1lEgVI/u0neV3BsppTObERsvNvoE/IWr8dNRIFVFD64Vy3oSXkspHeJTS+xucazhLnx3FElV0Y37S/lC3FFPbAoeKOVP8PIYkKriGX2n9ZGU0on02bGVmFzK9w7SybGYcYQEduJAfWXOuTeldJ84tVOxAp1twlovK+3W49tBOm8f4v1gOB250Yuc8+cppU3CCK9AZwXzUD0RY7mE9egq+ZyUUnsFV5SK/7CuJZQCb9eUr6wIAwpfi4u4Jcg579HnHs2vCKNKeAqtxraSz6roO2VNb/oxxM8ln1kRlp4WLmMNqhwmDeb2tBQV/FnKk1pJpGBiyf+o4JfykFrDpR+q9nRXRdzyMLtFZGoxp+Q9FWwqDxdo4XKmlKbrC142V0TcB8cI/6hVWFxTXl/BV/ocwmUD248ZlpZ8W855e5vw5dfgMRFdny8imEbYLryEI8HOZi9SSh3CsyCCYuOKRDBFuCST8RkuMzrBx3BQEVLCRSLcOy3nvL9qYPfi0VLuED7RWGFVIQWrc8776e/zP6nvEu3EuWNAagEeL+VuIR2oJ3YAN4mb4Hh8gLOOIqnZeFe463txc875kJ5Rf1f2CE2hF6diozgMo42FIuiZhn9xY865n3fT6BJfh1uFR3uKMMArRWwwUlRwDz6tIbUk5/xRo4aNsFZIBftwHJ4Vs7egSfvh4FJswRMiuN6La3LObzYbQTO8r79NWyhmbyOWC4lpKJwsBJktYunmlfrNpe8BM1XFUPrYj+Ior8RqEfctKokwuPXC3QThJZxjoPK4Gw8LaWpEwh2x154WmthyYeOqnkh7g583wlZxu6wxilJnFfvwVEntIuyrisMz9BeHd4kT3o0PxcwfFv4H1KHkM56XJicAAAAASUVORK5CYII=) no-repeat;
+  background-size: 100% 100%;
+}
+
+.kuang-text-1 {
+  color: #a5a5a5;
+  font-size: 20.47rpx;
+}
+
+/************************************************/
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.land {
+  width: 670rpx;
+  margin: 60rpx auto 0;
+}
+
+.land .land_li {
+  padding: 30rpx 42rpx;
+  border-radius: 20rpx;
+  box-shadow: 3px 3px 5px #eee;
+  background: #fff;
+  margin: 36rpx 0 30rpx;
+}
+
+.land .integration {
+  padding: 30rpx 42rpx;
+  border-radius: 20rpx;
+  box-shadow: 3px 3px 5px #eee;
+  background: #fff;
+  margin: 36rpx 0 30rpx;
+}
+
+.land .integration {
+  position: relative;
+}
+
+.land .integration .top .left {
+  float: left;
+}
+
+.land .integration .top .left .land_p {
+  font-size: 35.43rpx;
+  font-weight: 600;
+}
+
+.land .integration .top .left .land_p2 {
+  font-size: 25.26rpx;
+  color: #999;
+}
+
+.land .integration .top .right {
+  height: 100%;
+  float: right;
+}
+
+.land .integration .top .right .land_image {
+  width: 38rpx;
+  height: 38rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.land .integration .top .right .down {
+  width: 29rpx;
+  height: 16rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -4.85px;
+  right: 6%;
+  display: block;
+  margin: 0 auto;
+}
+
+.land .integration .top .right .land_sb {
+  font-size: 25.26rpx;
+}
+
+.land .integration .bottom {
+  padding: 40rpx 20rpx;
+  position: relative;
+}
+
+.land .integration .bottom .title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 25.26rpx;
+  padding: 10rpx 0;
+}
+
+.land .integration .bottom .detail {
+  width: 456rpx;
+  height: 455rpx;
+  padding: 30rpx 30rpx;
+  background-color: #fff;
+  z-index: 9999;
+  border: 2rpx solid #999;
+  border-radius: 30rpx;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  margin: -180rpx 115rpx;
+}
+
+.land .integration .bottom .detail .li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  border-bottom: 2rpx solid #999;
+  padding: 20rpx 30rpx;
+}
+
+.land .integration .bottom .detail .btn {
+  width: 223rpx;
+  height: 55rpx;
+  background-color: #99fdc9;
+  font-size: 30rpx;
+  font-weight: 550;
+  text-align: center;
+  line-height: 55rpx;
+  margin: 0 auto;
+  border: 2rpx solid #000;
+  border-radius: 30rpx;
+  margin-top: 40rpx;
+}
+
+.land .integration .bottom .color {
+  background-color: #97fdc8;
+  width: 78rpx;
+  height: 77rpx;
+  position: absolute;
+  top: 128rpx;
+  left: 22rpx;
+}
+
+.land .integration .bottom .shade {
+  background-color: #fff;
+  width: 78rpx;
+  height: 0rpx;
+  position: absolute;
+  top: 130rpx;
+  left: 25rpx;
+}
+
+.land .integration .bottom .num {
+  position: absolute;
+  top: 160rpx;
+  left: 22rpx;
+  font-size: 30rpx;
+  width: 78rpx;
+  text-align: center;
+}
+
+.land .integration .bottom .concentration {
+  font-size: 20rpx;
+  color: #999;
+}
+
+.land .integration .bottom .ping > image {
+  width: 85rpx;
+  height: 120rpx;
+}
+
+.land .integration .bottom .name {
+  width: 85rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.land .integration .bottom .input {
+  width: 150rpx;
+  font-size: 20rpx;
+  color: #999;
+  position: absolute;
+  top: 110rpx;
+  left: 220rpx;
+}
+
+.land .integration .bottom .guandao > image {
+  width: 328rpx;
+  height: 20rpx;
+  position: absolute;
+  top: 160rpx;
+  left: 105rpx;
+}
+
+.land .integration .bottom .guandao1 > image {
+  width: 20rpx;
+  height: 78rpx;
+  position: absolute;
+  top: 225rpx;
+  right: 80rpx;
+}
+
+.land .integration .bottom .ball {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  display: flex;
+  box-shadow: 0 0 20rpx #f0f0f0;
+  margin: 00rpx auto;
+  position: absolute;
+  right: 20rpx;
+  top: 90rpx;
+}
+
+.land .integration .bottom .ball_min {
+  width: 126rpx;
+  height: 126rpx;
+  border-radius: 50%;
+  margin: 8rpx auto;
+  line-height: 126rpx;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #fff, #97fdc8);
+}
+
+.land .integration .bottom .list {
+  border: 2rpx solid #1c8d52;
+  border-radius: 30rpx;
+  margin-top: 15rpx;
+  padding: 50rpx 35rpx 30rpx 30rpx;
+  color: #003419;
+  font-size: 25rpx;
+  font-weight: 800;
+}
+
+.land .integration .bottom .list .top {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 20rpx #dedede;
+  padding: 30rpx 30rpx;
+  border-radius: 10px;
+  margin-bottom: 20rpx;
+}
+
+.land .integration .bottom .list .bottom {
+  box-shadow: 0 0 20rpx #dedede;
+  padding: 30rpx 30rpx;
+  border-radius: 10px;
+  margin-bottom: 20rpx;
+}
+
+.land .integration .bottom .list .bottom .select {
+  display: flex;
+  position: relative;
+}
+
+.land .integration .bottom .list .bottom .select .img {
+  width: 28rpx;
+  height: 16rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 15rpx;
+}
+
+.land .integration .bottom .list .bottom .items {
+  margin-top: 30rpx;
+}
+
+.land .integration .bottom .list .bottom .item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #a0a4a2;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+
+checkbox .wx-checkbox-input {
+  border-radius: 50%; /* 圆角 */
+  width: 30rpx; /* 背景的宽 */
+  height: 30rpx; /* 背景的高 */
+}
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  border: none;
+  background: rgb(118, 240, 3);
+}
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%; /* 圆角 */
+  width: 28rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 28rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 28rpx; /* 对勾大小 30rpx */
+  color: #fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.land .integration .bottom .list .bottom .btn {
+  margin: 0 auto;
+  width: 160rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+  border: 2rpx solid #000;
+  border-radius: 30rpx;
+  text-align: center;
+  font-size: 25rpx;
+  margin-top: 50rpx;
+}
+
+.land .land_li .top {
+  position: relative;
+}
+
+.land .land_li .top .left {
+  float: left;
+}
+
+.land .land_li .top .left .land_p {
+  font-size: 35.43rpx;
+  font-weight: 600;
+}
+
+.land .land_li .top .left .land_p2 {
+  font-size: 25.26rpx;
+  color: #999;
+}
+
+.land .land_li .top .right {
+  height: 100%;
+  float: right;
+}
+
+.land .land_li .top .right .land_image {
+  width: 38rpx;
+  height: 38rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.land .land_li .top .right .down {
+  width: 29rpx;
+  height: 16rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -4.85px;
+  right: 6%;
+  display: block;
+  margin: 0 auto;
+}
+
+.land .land_li .top .right .land_sb {
+  font-size: 25.26rpx;
+}
+
+.land .land_li .bottom {
+  padding: 40rpx 0 0;
+}
+
+.land .land_li .qrcode {
+  height: 40rpx;
+  text-align: center;
+  font-size: 25.26rpx;
+  margin-top: 20rpx;
+}
+
+.land .land_li .bottom .shed {
+  padding: 10rpx 0 20rpx;
+}
+
+.land .land_li .bottom .shed .title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 25.26rpx;
+  padding: 10rpx 0;
+}
+
+.land .land_li .bottom .shed .boll_li {
+  width: 25%;
+  padding: 20rpx 0 0;
+  float: left;
+}
+
+.land .land_li .bottom .shed .ball {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  display: flex;
+  box-shadow: 0 0 20rpx #f0f0f0;
+  margin: 0 auto;
+}
+
+.land .land_li .bottom .shed .ball_min {
+  width: 126rpx;
+  height: 126rpx;
+  border-radius: 50%;
+  margin: 0 auto;
+  align-self: center;
+  text-align: center;
+}
+
+.land .land_li .bottom .shed .one .ball_min {
+  background-image: linear-gradient(to bottom, #fff, #fff2d5);
+}
+
+.land .land_li .bottom .shed .tow .ball_min {
+  background-image: linear-gradient(to bottom, #fff, #d8f8c9);
+}
+
+.land .land_li .bottom .shed .three .ball_min {
+  background-image: linear-gradient(to bottom, #fff, #f7ebb1);
+}
+
+.land .land_li .bottom .shed .fore .ball_min {
+  background-image: linear-gradient(to bottom, #fff, #d8f8c9);
+}
+
+.land .land_li .bottom .shed .ball_min .ball_min_p {
+  height: 50%;
+  position: relative;
+  text-align: center;
+}
+
+.land .land_li .bottom .shed .ball_min .ball_min_p:first-child text {
+  font-size: 20rpx;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50px;
+  margin-left: -25px;
+  text-align: center;
+}
+
+.land .land_li .bottom .shed .ball_min .ball_min_p:last-child text {
+  font-size: 30rpx;
+  margin-left: 2px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 126rpx;
+  margin-left: -63rpx;
+  text-align: center;
+}
+
+.land .land_li .bottom .shed .tips {
+  font-size: 25.26rpx;
+  color: #737373;
+  padding: 20rpx 5% 0;
+  clear: both;
+}
+
+.land .land_li .Intelligent_ventilation .title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 25.26rpx;
+  padding: 10rpx 0;
+}
+
+.land .land_li .Intelligent_ventilation .automatic {
+  box-shadow: 0 0 20rpx #dedede;
+  padding: 30rpx 4%;
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .top {
+  display: flex;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .top .open_tuyere {
+  display: flex;
+  justify-content: space-between;
+  width: 200rpx;
+  height: 51rpx;
+  flex-wrap: wrap;
+  margin-left: 25rpx;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .top .open_tuyere .num {
+  background-color: #72ffc8;
+  text-align: center;
+  line-height: 72rpx;
+  width: 83rpx;
+  height: 72rpx;
+  border-radius: 20rpx;
+  font-size: 25rpx;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .top .open_tuyere .text {
+  background-color: #72ffc8;
+  text-align: center;
+  line-height: 72rpx;
+  width: 83rpx;
+  height: 72rpx;
+  border-radius: 20rpx;
+  font-size: 25rpx;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .top .open_tuyere text {
+  width: 150rpx;
+  padding: 5rpx 0rpx 25rpx 25rpx;
+  font-size: 16rpx;
+  text-align: center;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .top .close_tuyere {
+  display: flex;
+  justify-content: space-between;
+  width: 200rpx;
+  height: 51rpx;
+  flex-wrap: wrap;
+  margin-left: 25rpx;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .top .close_tuyere .num {
+  background-color: #f9f1c2;
+  text-align: center;
+  line-height: 72rpx;
+  width: 83rpx;
+  height: 72rpx;
+  border-radius: 20rpx;
+  font-size: 25rpx;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .top .close_tuyere .text {
+  background-color: #faf2c4;
+  text-align: center;
+  line-height: 72rpx;
+  width: 83rpx;
+  height: 72rpx;
+  border-radius: 20rpx;
+  font-size: 25rpx;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .top .close_tuyere text {
+  width: 150rpx;
+  padding: 5rpx 0rpx 25rpx 25rpx;
+  font-size: 16rpx;
+  text-align: center;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .top .zd_btn {
+  width: 102rpx;
+  height: 102rpx;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .top .jiantou {
+  width: 25rpx;
+  height: 15rpx;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .explain {
+  padding: 30rpx 10rpx;
+  font-size: 18rpx;
+  text-align: center;
+  color: #737373;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .bottom {
+  display: flex;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .bottom .Spread {
+  width: 40%;
+  height: 90rpx;
+  box-shadow: 0 0 20rpx #dedede;
+  padding: 30rpx 5%;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .bottom .Spread .open {
+  width: 90rpx;
+  height: 70rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e4e4;
+  font-size: 20rpx;
+  padding-top: 15rpx;
+  border-radius: 20rpx;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .bottom .Spread .open text {
+  width: 100%;
+  text-align: center;
+  color: #9fa3a2;
+  font-size: 20rpx;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .bottom .Roll {
+  width: 40%;
+  height: 90rpx;
+  box-shadow: 0 0 20rpx #dedede;
+  padding: 30rpx 5%;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .bottom .Roll .close {
+  width: 90rpx;
+  height: 70rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e4e4;
+  font-size: 20rpx;
+  padding-top: 15rpx;
+  border-radius: 20rpx;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .bottom .Roll .close text {
+  width: 100%;
+  text-align: center;
+  color: #9fa3a2;
+  font-size: 20rpx;
+}
+
+.land .land_li .Intelligent_ventilation .automatic .bottom image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.land .land_li .Intelligent_ventilation .manual {
+  box-shadow: 0 0 20rpx #dedede;
+  padding: 30rpx 4%;
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.land .land_li .Intelligent_ventilation .manual .top {
+  display: flex;
+}
+
+.land .land_li .Intelligent_ventilation .manual .top .open_tuyere {
+  display: flex;
+  justify-content: space-between;
+  width: 200rpx;
+  height: 51rpx;
+  flex-wrap: wrap;
+  margin-left: 25rpx;
+}
+
+.land .land_li .Intelligent_ventilation .manual .top .open_tuyere .num {
+  background-color: #e4e4e4;
+  text-align: center;
+  line-height: 72rpx;
+  width: 83rpx;
+  height: 72rpx;
+  border-radius: 20rpx;
+  font-size: 25rpx;
+}
+
+.land .land_li .Intelligent_ventilation .manual .top .open_tuyere .text {
+  background-color: #e4e4e4;
+  text-align: center;
+  line-height: 72rpx;
+  width: 83rpx;
+  height: 72rpx;
+  border-radius: 20rpx;
+  font-size: 25rpx;
+}
+
+.land .land_li .Intelligent_ventilation .manual .top .open_tuyere text {
+  width: 150rpx;
+  padding: 5rpx 0rpx 25rpx 25rpx;
+  font-size: 16rpx;
+  text-align: center;
+}
+
+.land .land_li .Intelligent_ventilation .manual .top .close_tuyere {
+  display: flex;
+  justify-content: space-between;
+  width: 200rpx;
+  height: 51rpx;
+  flex-wrap: wrap;
+  margin-left: 25rpx;
+}
+
+.land .land_li .Intelligent_ventilation .manual .top .close_tuyere .num {
+  background-color: #e4e4e4;
+  text-align: center;
+  line-height: 72rpx;
+  width: 83rpx;
+  height: 72rpx;
+  border-radius: 20rpx;
+  font-size: 25rpx;
+}
+
+.land .land_li .Intelligent_ventilation .manual .top .close_tuyere .text {
+  background-color: #e4e4e4;
+  text-align: center;
+  line-height: 72rpx;
+  width: 83rpx;
+  height: 72rpx;
+  border-radius: 20rpx;
+  font-size: 25rpx;
+}
+
+.land .land_li .Intelligent_ventilation .manual .top .close_tuyere text {
+  width: 150rpx;
+  padding: 5rpx 0rpx 25rpx 25rpx;
+  font-size: 16rpx;
+  text-align: center;
+}
+
+.land .land_li .Intelligent_ventilation .manual .top .zd_btn {
+  width: 102rpx;
+  height: 102rpx;
+}
+
+.land .land_li .Intelligent_ventilation .manual .top .jiantou {
+  width: 25rpx;
+  height: 15rpx;
+}
+
+.land .land_li .Intelligent_ventilation .manual .explain {
+  padding: 30rpx 10rpx;
+  font-size: 18rpx;
+  text-align: center;
+  color: #737373;
+}
+
+.land .land_li .Intelligent_ventilation .manual .bottom {
+  display: flex;
+}
+
+.land .land_li .Intelligent_ventilation .manual .bottom .Spread {
+  width: 40%;
+  height: 90rpx;
+  box-shadow: 0 0 20rpx #dedede;
+  padding: 30rpx 5%;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.land .land_li .Intelligent_ventilation .manual .bottom .Spread .open {
+  width: 90rpx;
+  height: 70rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e4e4;
+  font-size: 20rpx;
+  padding-top: 15rpx;
+  border-radius: 20rpx;
+}
+
+.land .land_li .Intelligent_ventilation .manual .bottom .Spread .open text {
+  width: 100%;
+  text-align: center;
+  color: #9fa3a2;
+  font-size: 20rpx;
+}
+
+.land .land_li .Intelligent_ventilation .manual .bottom .Roll {
+  width: 40%;
+  height: 90rpx;
+  box-shadow: 0 0 20rpx #dedede;
+  padding: 30rpx 5%;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.land .land_li .Intelligent_ventilation .manual .bottom .Roll .close {
+  width: 90rpx;
+  height: 70rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e4e4;
+  font-size: 20rpx;
+  padding-top: 15rpx;
+  border-radius: 20rpx;
+}
+
+.land .land_li .Intelligent_ventilation .manual .bottom .Roll .close text {
+  width: 100%;
+  text-align: center;
+  color: #9fa3a2;
+  font-size: 20rpx;
+}
+
+.land .land_li .Intelligent_ventilation .manual .bottom image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.jiantou {
+  margin-top: 30rpx;
+}
+
+.land .land_li .bottom .equipment {
+  padding: 10rpx 0 20rpx;
+}
+
+.land .land_li .bottom .equipment .title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 25.26rpx;
+  padding: 10rpx 0;
+}
+
+.land .land_li .bottom .equipment .control_ul .control_li {
+  box-shadow: 0 0 20rpx #dedede;
+  padding: 30rpx 4%;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.land .land_li .bottom .equipment .control_ul .control_li .top {
+  font-weight: 600;
+}
+
+.land .land_li .bottom .equipment .control_ul .control_li .control_k {
+  margin: 30rpx 0;
+}
+
+.land .land_li .bottom .equipment .control_ul .control_li .ulli {
+  width: 25%;
+  height: 98rpx;
+  float: left;
+  margin-bottom: 20rpx;
+}
+
+.land .land_li .bottom .equipment .control_ul .control_li .ulli image {
+  display: block;
+  margin: 0 auto;
+  width: 30rpx;
+  height: 36rpx;
+  margin-bottom: 4rpx;
+}
+
+.land .land_li .bottom .equipment .control_ul .control_li .ulli .ullidiv {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  background-image: linear-gradient(to left, #b5fcd7, #6efdb2);
+  border-radius: 15px;
+  box-shadow: 0 0 10rpx #dedede;
+  margin: 0 auto;
+}
+
+.land .land_li .bottom .equipment .control_ul .control_li .close_command .ullidiv {
+  background: #fff;
+}
+
+.land .land_li .bottom .equipment .control_ul .control_li .ulli .ullip {
+  text-align: center;
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  height: 70%;
+  top: 50%;
+  margin-top: -30%;
+  font-size: 25.26rpx;
+}
+
+.land .land_li .bottom .source {
+  padding: 10rpx 0 20rpx;
+}
+
+.land .land_li .bottom .source .title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 25.26rpx;
+  padding: 10rpx 0;
+}
+
+.land .land_li .bottom .source .source_ul .source_li {
+  box-shadow: 0 0 20rpx #dedede;
+  padding: 30rpx 4%;
+  border-radius: 10px;
+  margin-bottom: 20rpx;
+}
+
+.land .land_li .bottom .source .source_ul .source_li .source_p {
+  font-weight: 600;
+}
+
+.land .land_li .bottom .source .source_ul .source_li .source_p text {
+  float: right;
+  display: inline-block;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 25.26rpx;
+  padding: 8rpx 0;
+  width: 20%;
+  text-align: center;
+}
+
+.land .land_li .bottom .source .source_ul .source_li .source_p .start {
+  background-image: linear-gradient(to right, #f8ecb8, #fcf6dd);
+  color: #60491a;
+}
+
+.land .land_li .bottom .source .source_ul .source_li .source_p .end {
+  background-image: linear-gradient(to left, #b5fcd7, #6efdb2);
+  color: #037d3e;
+}
+
+.land .land_li .bottom .equipment .control_ul .control_li .ulli .disullidiv {
+  background: #dedede;
+  background-image: none;
+}
+
+.nones {
+  background: transparent;
+  font-size: 26rpx;
+  color: #6e6e6e;
+  text-align: center;
+  padding: 100rpx 0 0;
+}
+
+.nones image {
+  width: 436rpx;
+  height: 440rpx;
+}

@@ -1,0 +1,65 @@
+<!--pages/enterprise/enterprise.wxml-->
+<view class="kongbao-head"></view>
+<view class="pape">
+  <view class="head">企业信息</view>
+  <view class="tudidaxiao m-t-50">
+    <text class="xiangxi">企业名称</text>
+    <input value="请输入企业全称"></input>
+  </view>
+  <view class="tudidaxiao m-t-30">
+    <text class="xiangxi">法人姓名</text>
+    <input value="请输入法人姓名"></input>
+  </view>
+  <view class="tudidaxiao m-t-30">
+    <text class="xiangxi">公司电话</text>
+    <input value="请输入公司电话"></input>
+  </view>
+  <view class="suozaidiqu">
+    <text class="suozaidi">所在地区</text>
+  </view>
+  <view class="diyu">
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        <view class="qingdian">
+          <text class="qingxuangze">请选择</text>
+          <text class="xuebi"></text>
+        </view>
+      </view>
+      <text>{{region[0]}}</text>
+      <text class="left-1">{{region[1]}}</text>
+      <text class="left-1">{{region[2]}}</text>
+    </picker>
+  </view>
+  <view class="xiangxi">详细地址</view>
+  <view class="shuru">
+    <input value="请输入详细地址信息"></input>
+  </view>
+  <view class="xiangxi">基地信息</view>
+  <view class="ditu">
+    <map 
+id="map" 
+longitude="{{longitude}}" 
+latitude="{{latitude}}" 
+scale="14" 
+controls="{{controls}}" bindcontroltap="controltap" 
+markers="{{markers}}" bindmarkertap="markertap"
+ polyline="{{polyline}}" 
+circles="{{circles}}" 
+bindregionchange="regionchange" 
+show-location 
+style="width: 100%;height: 100%;border-radius: 15rpx;">
+</map>
+  </view>
+  <view class="huoqujinwei">
+    <text class="huoqujinwei-text">已获取:</text>
+    <text class="jinwei">经度:111°13'02.44"</text>
+    <text class="jinwei">纬度：34°50'12.72"</text>
+  </view>
+  <view class="xiangxi">企业资质</view>
+  <view class="shamngv">
+    <view class="shangkesf"></view>
+  </view>
+  <view class="kong"></view>
+  <button class="wancheng">完成</button>
+  <view class="konger"></view>
+</view>

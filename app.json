@@ -1,0 +1,74 @@
+{
+	"pages": [	
+		"pages/index/index",
+		"pages/shouhuo/shouhuo",
+		"pages/company/company",
+		"pages/dome/dome",
+		"pages/message/message",
+		"pages/mine/mine",
+		"pages/code/code",
+		"pages/testing/testing",
+		"pages/brand/brand",
+		"pages/writing/writing",
+		"pages/register/register",
+		"pages/follow/follow",
+		"pages/Fans/Fans",
+		"pages/qrcodelist/qrcodelist",
+		"pages/power/power",
+		"pages/healthy/healthy",
+		"pages/farmland/farmland",
+		"pages/user/user",
+		"pages/xiaoxi/xiaoxi",
+		"pages/photos/photos",
+		"pages/hot/hot",
+		"pages/means/means",
+		"pages/enterprise/enterprise",
+		"pages/qrcode/qrcode"
+	],
+	"permission": {
+		"scope.userLocation": {
+			"desc": "地理信息用于土地地图等使用"
+		}
+	},
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "首页",
+		"navigationBarTextStyle": "black",
+		"navigationStyle": "custom"
+	},
+	"tabBar": {
+		"color": "#a9b7b7",
+		"selectedColor": "#7eac2e",
+		"borderStyle": "black",
+		"list": [
+			{
+				"selectedIconPath": "image/sy.png",
+				"iconPath": "image/hsy.png",
+				"pagePath": "pages/index/index",
+				"text": "首页"
+			}, {
+				"selectedIconPath": "image/nt.png",
+				"iconPath": "image/hnt.png",
+				"pagePath": "pages/farmland/farmland",
+				"text": "智慧农业"
+			},{
+				"selectedIconPath": "image/fb.png",
+				"iconPath": "image/fb.png",
+				"pagePath": "pages/writing/writing",
+				"text": "发布"
+			},{
+				"selectedIconPath": "image/message1.png",
+				"iconPath": "image/message.png",
+				"pagePath": "pages/xiaoxi/xiaoxi",
+				"text": "消息"
+			}, {
+				"selectedIconPath": "image/wd.png",
+				"iconPath": "image/hwd.png",
+				"pagePath": "pages/mine/mine",
+				"text": "我的"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap75.json"
+}

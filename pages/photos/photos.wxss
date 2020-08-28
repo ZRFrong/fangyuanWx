@@ -1,0 +1,20 @@
+.page{padding-top:40rpx;}
+.left{width:140rpx;float:left;}
+.left view{text-align:center;color:#7d7d7d;}
+.left view:first-child{font-size:34rpx;}
+.left view:last-child{font-size:24rpx;}
+.right{width:540rpx;float:left;border-left:1px solid rgb(238,238,238);padding-bottom:60rpx;padding-left:40rpx;position:relative;}
+.right image,.right video{border-radius:10px;box-shadow:5px 5px 5px #dedede;}
+.num_1{width:380rpx;height:250rpx;}
+.num_2{width:250rpx;height:250rpx;float:left;margin-right:10rpx;}
+.num_2:last-child{margin:0}
+.num_3_view{float:left;width:170rpx;}
+.num_3{width:340rpx;height:340rpx;margin-right:10rpx;float:left;}
+.num_3_view .num_3a:nth-child(1),.num_3_view .num_3a:nth-child(2){width:170rpx;height:170rpx;}
+.num_4{width:200rpx;height:200rpx;margin-right:10rpx;}
+.num_5_view{float:left;width:260rpx;}
+.num_5a{width:120rpx;height:120rpx;margin-right:10rpx;}
+.num_5{width:250rpx;height:250rpx;float:left;margin-right:10rpx;}
+.num_6{width:170rpx;height:170rpx;margin-right:10rpx;}
+.dian{position:absolute;width:20rpx;height:20rpx;border-radius:50%;background:#2ed579;box-shadow:0 0 5px 1px #2ed579;left:-10rpx;top:10rpx;}
+.over{overflow:auto;margin-bottom:10rpx;}

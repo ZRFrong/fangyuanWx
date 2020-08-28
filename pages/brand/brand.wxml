@@ -1,0 +1,46 @@
+<view class="kongbao-head">
+	<view class="left-icon" bindtap="goback"></view>品牌授权
+</view>
+<view class="pape">
+	<view class="swiper">
+		<image src="../../image/brand.png" class="slide-image" />
+	</view>
+	<form bindsubmit="formSubmit">
+		<view class="form">
+			<view class="li">
+				<text>姓名</text>
+				<input name="username" class="input" value="{{username}}" />
+			</view>
+			<view class="li">
+				<text>身份证号</text>
+				<input name="idcard" type="idcard" class="input" value="{{idcard}}" />
+			</view>
+			<view class="li">
+				<text>手机号</text>
+				<input name="phone" type="number" class="input" value="{{phone}}" />
+			</view>
+		</view>
+		<view class="form2">
+			<view class="li">
+				<text>品牌名</text>
+				<input name="brand_name" class="input" value="{{brand_name}}" />
+			</view>
+			<view class="li">
+				<text>经营范围</text>
+				<input name="range" type="text" class="input" value="{{range}}" />
+			</view>
+			<view class="li">
+				<text>营业执照</text>
+				<image name="business_license" bindtap="chooseImage" data-type="1" src="{{photo1}}"></image>
+			</view>
+			<view class="li">
+				<text>产品照片</text>
+				<image bindtap="chooseImage" data-type="2" src="{{photo2}}"></image>
+			</view>
+		</view>
+		<view class="form3">
+			<button wx:if="{{is != 1}}" form-type="submit">提交申请</button>
+			<button wx:else class="none" >审核中</button>
+		</view>
+	</form>
+</view>

@@ -1,0 +1,3 @@
+<web-view src="https://peasetech.cn/portal/source/getcode/id/{{land_id}}">
+	
+</web-view>

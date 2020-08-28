@@ -1,0 +1,45 @@
+<view class="kongbao-head">
+	<view class="left-icon" bindtap="goback"></view>农产品收获
+</view>
+<view class="pape">
+	<form bindsubmit="formSubmit">
+		<view class="form">
+			<view class="li">
+				<text>土地名称</text>
+				<view class="section">
+				  	<picker bindchange="bindPickerChange" name="land_id" value="{{x}}" range-key="crop" range="{{list}}">
+				    	<view class="picker"  style="text-align:right;">
+				      		{{select}}
+				    	</view>
+				  	</picker>
+				</view>
+			</view>
+			<view class="li">
+				<text>土地产量</text>
+				<input name="yield"  class="input" value="{{info.yield}}" />
+			</view>
+			<view class="li">
+				<text>是否全部收割</text>
+				<view class="section">
+				  	<picker bindchange="bindshouge" name="harvest" value="{{info.yield}}" range="{{shougearr}}">
+				    	<view class="picker" style="text-align:right;">
+				      		{{shouge}}
+				    	</view>
+				  	</picker>
+				</view>
+			</view>
+			<view class="li">
+				<text>处理人</text>
+				<input name="man" class="input" value="{{info.man}}" />
+			</view>
+			<view class="li">
+				<text>产品照片</text>
+				<image bindtap="chooseImage" data-type="1" src="{{photo1}}"></image>
+			</view>
+		</view>
+		<view class="form3">
+			<button wx:if="{{is != 1}}" form-type="submit">提交申请</button>
+			<button wx:else class="none" >审核中</button>
+		</view>
+	</form>
+</view>

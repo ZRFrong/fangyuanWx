@@ -1,0 +1,12 @@
+/* pages/xiaoxi/xiaoxi.wxss */
+.pape{
+  background:rgb(245,245,245);
+  height:calc(100% - 130rpx);
+}
+.message{width:70%;background:#fff;border-radius:5px;padding:40rpx 40rpx;margin:0 auto;}
+.title{padding:10rpx 0;border-bottom:1px solid rgb(237,237,237);font-size:30rpx;}
+.content{font-size:28rpx;padding:10rpx 0;color:#666;}
+.timeview{text-align:center;margin-bottom:40rpx;}
+.time{background:rgb(218,218,218);color:#fff;border-radius:5px;font-size:26rpx;padding:5rpx 15rpx; }
+.li{padding:40rpx 0 0;}
+.nothing{font-size:26rpx;text-align: center;margin:20rpx 0;color:#999;}

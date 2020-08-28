@@ -1,0 +1,102 @@
+<view class="kongbao-head">
+	<view class="left-icon" bindtap="goback"></view>每日健康打卡
+</view>
+<view class="pape">
+	<image class="img"  src="/image/jianka	ng.jpg" ></image>
+	<form bindsubmit="formSubmit">
+		<view class="ul">
+			<view class="li">
+				<view class="header">
+					<view class="header-left">
+						<view class="xuhaoview">
+							<text class="xuhao">01</text>
+						</view>
+						<image class="banyuan" src="/image/banyuan.png"></image>
+					</view>
+					<text class="title">目前健康状况</text>
+					<text class="tip">单选</text>
+				</view>
+				<view class="option">
+					<radio-group name="ask_1">
+		                <radio class="radio" value="1" disabled="{{disabled}}" checked="{{ask_1_1}}">
+		                    <view class="radiostyle">健康</view>
+		                </radio>
+		                <radio class="radio" value="2" disabled="{{disabled}}" checked="{{ask_1_2}}">
+		                    <view class="radiostyle">有发烧、咳嗽等症状</view>
+		                </radio>
+		                <radio class="radio" value="3" disabled="{{disabled}}" checked="{{ask_1_3}}">
+		                    <view class="radiostyle">其它症状</view>
+		                </radio>
+		            </radio-group>
+				</view>
+			</view>
+			<view class="li">
+				<view class="header">
+					<view class="header-left">
+						<view class="xuhaoview">
+							<text class="xuhao">02</text>
+						</view>
+						<image class="banyuan" src="/image/banyuan.png"></image>
+					</view>
+					<text class="title">当前所在乡/镇、村</text>
+				</view>
+				<view class="option" style="padding-bottom:20rpx;">
+					<input name="ask_2" class="inputstyle" placeholder="请输入所在村" placeholder-class="placeholder-class"  disabled="{{disabled}}" value="{{value}}"/>
+				</view>
+			</view>
+			<view class="li">
+				<view class="header">
+					<view class="header-left">
+						<view class="xuhaoview">
+							<text class="xuhao">03</text>
+						</view>
+						<image class="banyuan" src="/image/banyuan.png"></image>
+					</view>
+					<text class="title">是否有就诊医院</text>
+					<text class="tip">单选</text>
+				</view>
+				<view class="option">
+					<radio-group name="ask_3">
+		                <radio class="radio" value="1"  disabled="{{disabled}}"  checked="{{ask_3_1}}">
+		                    <view class="radiostyle">无</view>
+		                </radio>
+		                <radio class="radio" value="2"  disabled="{{disabled}}" checked="{{ask_3_2}}">
+		                    <view class="radiostyle">门诊</view>
+		                </radio>
+		                <radio class="radio" value="3"  disabled="{{disabled}}" checked="{{ask_3_3}}">
+		                    <view class="radiostyle">住院</view>
+		                </radio>
+		                <radio class="radio" value="4"  disabled="{{disabled}}" checked="{{ask_3_4}}">
+		                    <view class="radiostyle">其它</view>
+		                </radio>
+		            </radio-group>
+				</view>
+			</view>
+			<view class="li">
+				<view class="header">
+					<view class="header-left">
+						<view class="xuhaoview">
+							<text class="xuhao">04</text>
+						</view>
+						<image class="banyuan" src="/image/banyuan.png"></image>
+					</view>
+					<text class="title">是否接触过疑似患者</text>
+					<text class="tip">单选</text>
+				</view>
+				<view class="option">
+					<radio-group name="ask_4">
+		                <radio class="radio" value="1" disabled="{{disabled}}" checked="{{ask_4_1}}">
+		                    <view class="radiostyle">否</view>
+		                </radio>
+		                <radio class="radio" value="2" disabled="{{disabled}}" checked="{{ask_4_2}}">
+		                    <view class="radiostyle">是</view>
+		                </radio>
+		            </radio-group>
+				</view>
+			</view>
+			<view class="submit">
+				<button class="dosubmit" form-type="submit" disabled="{{disabled}}">提　交</button>
+			</view>
+		</view>
+	</form>
+</view>

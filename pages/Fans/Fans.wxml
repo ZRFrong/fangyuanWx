@@ -1,0 +1,23 @@
+<!--pages/follow/follow.wxml-->
+<view class="kongbao-head">
+	<view class="left-icon" bindtap="goback"></view>我的粉丝
+</view>
+<view class="pape">
+	<form  bindsubmit="search" >
+		<view class="head-iput">
+	    <text class="efj"></text>
+	    <input name="search" placeholder="有你认识的人吗~" placeholder-class="phcolor" class="iisjd" value="{{search}}" />
+	    <button class="sousuo" form-type="submit">搜索</button>
+	  </view>
+	</form>
+  <view class="mian">
+    <view class="fangjf" wx:for="{{data}}" wx:key="index" >
+      <image src="{{item.image}}"  binderror="touerror" bindtap="oepnuser" data-userid="{{item.user_id}}"  data-index="{{index}}"  mode="aspectFill" class="tghnh"></image>
+      <view class="dwsdc">{{item.nickname}}</view>
+      <view class="dsc" wx:if="{{item.sign != ''}}">{{item.sign}}</view>
+      <view class="dsc" wx:else>这个人很懒,什么也没说</view>
+      <view class="desf" wx:if="{{item.is_fans == 0}}" bindtap="addFans" data-userid="{{item.user_id}}" data-index="{{index}}">关注</view>
+      <view class="desf desfss" wx:if="{{item.is_fans == 1}}" bindtap="delFans" data-userid="{{item.user_id}}" data-index="{{index}}">取消关注</view>
+    </view>
+  </view>
+</view>

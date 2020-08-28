@@ -1,0 +1,406 @@
+<!--pages/dome/dome.wxml-->
+<wxs src="./farmland.wxs" module="tools" />
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{change_ping}}"></view>
+<view class="pape">
+  <view class="swipers">
+    <image src="../../image/banner111.png" data-url="{{item.url}}" bindtap="swipclick" style="width:100%;height:370rpx;" class="slide-image" />
+    <text class="biaoti">农业</text>
+    <text class="weizhi"></text>
+    <text class="xiqi">{{city}}</text>
+  </view>
+
+  <view class="kuang">
+    <view class="kuang-center">
+      <view class="kuang-left fl">
+        <text class="left-xue"></text>
+      </view>
+      <view class="fr kuang-right">
+        <view class="kuang-1 fl">
+          <view class="wewndu">温度(℃)</view>
+          <text class="shuzi">{{temperature}}</text>
+        </view>
+        <view class="kuang-1 fl">
+          <view class="wewndu">PM2.5</view>
+          <text class="shuzi">{{pm}}</text>
+        </view>
+        <view class="fl kuang-2">
+          <view class="wewndu">风向</view>
+          <text class="shuzi2">{{win}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="land">
+    <view class="nones" bindtap="openaddland" style="display:{{nones}}">
+      <image src="../../image/nothingland.png" />
+    </view>
+    <view style="overflow: auto;">
+      <!-- 水肥一体总控台 -->
+      <view class="integration">
+        <!-- 上 -->
+        <view class="top clearfix" bindtap="clickButtton">
+          <view class="left">
+            <view class="land_p">水肥一体总控台</view>
+            <view class="land_p2">在运行{{shed}}个棚</view>
+          </view>
+          <view class="right">
+            <view>
+              <view>
+                <image class="land_image" src="/image/yes.png"></image>
+                <view class="land_sb">设备正常</view>
+              </view>
+              <!-- <view>
+                <image class="land_image" src="/image/yichang.png"></image>
+                <view class="land_sb">设备异常</view>
+              </view> -->
+            </view>
+
+          </view>
+        </view>
+        <!-- 下 -->
+        <view class="bottom">
+          <view class="title">— 水肥总控台 —</view>
+          <view class="single">
+            <view class="ping" bindtap="change_ping">
+              <image src="/image/pingzi.png"></image>
+              <view class="color"></view>
+              <view class="shade"></view>
+              <text class="num">{{standing_crop}}</text>
+            </view>
+            <view class="name">{{fertilizer_name}}</view>
+            <view class="concentration">浓度{{concentration}}%</view>
+
+            <view class="input">
+              <input type="text" placeholder="请输入施肥量"></input>
+
+            </view>
+            <view class="guandao">
+              <image src="/image/guandao.png"></image>
+            </view>
+            <view class="guandao1" wx:if="{{list}}">
+              <image src="/image/guandao1.png"></image>
+            </view>
+
+            <view class="btn" bindtap="fertilize">
+              <view class="ball">
+                <view class="ball_min">
+
+                  <text>施肥</text>
+
+                </view>
+              </view>
+            </view>
+
+          </view>
+
+
+          <form class="detail" wx:if="{{change_ping}}" bindsubmit="change_detail">
+            <view class="li">
+              <view>肥料名称</view>
+              <input style="width:250rpx;text-align:right" type="text" value="{{fertilizer_name}}" name="name"></input>
+            </view>
+            <view class="li">
+              <view>肥料捅体积</view>
+              <view>500L</view>
+            </view>
+            <view class="li">
+              <view>肥料现有量</view>
+              <input style="width:100rpx;text-align:right" type="text"value="{{standing_crop}}" name="standing_crop"></input>
+            </view>
+            <view class="li">
+              <view>肥料浓度</view>
+              <view>{{concentration}}%</view>
+            </view>
+            <button class="btn" form-type="submit">确定修改</button>
+          </form>
+
+
+          <view class="list" wx:if="{{list}}">
+            <view class="top">
+              <view>全部施肥</view>
+              <view bindtap="checkall">点击操作</view>
+
+            </view>
+
+            <view class="bottom">
+              <view class="select"  bindtap="select">
+                <view>选择大棚</view>
+                <view>
+                  <image class="img" src="/image/botton.png"></image>
+                </view>
+              </view>
+              <view wx:if="{{select}}">
+
+                <checkbox-group class="items" bindchange="checkboxChange">
+                  <label class="checkbox" wx:for="{{items}}" wx:key="name" class="item">
+                    <text>{{item.name}}</text>
+                    <checkbox class="checkbox" value="{{item.name}}" checked="{{item.checked}}" />
+                  </label>
+                </checkbox-group>
+
+                <view class="btn" bindtap="fertilize_start">
+                  确定施肥
+                </view>
+
+                
+
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+
+      <!-- 测试 -->
+      <view wx:for="{{data}}" wx:key="index" class="land_li">
+        <view class="top clearfix" bindtap="clickButtton" data-id="{{index}}" data-show="{{item.show}}">
+          <view class="left">
+            <view class="land_p">{{item.id}}# {{item.crop_name}}</view>
+            <view wx:if="{{item.is_equipment == 1}}" class="land_p2">已运行{{item.equipment.already}}天/剩余{{item.equipment.surplus}}天</view>
+          </view>
+          <view class="right">
+            <view wx:if="{{item.is_equipment == 1}}">
+              <view wx:if="{{item.equipment.is_longin == 1}}">
+                <image class="land_image" src="/image/yes.png"></image>
+                <view class="land_sb">设备正常</view>
+              </view>
+              <view wx:else>
+                <image class="land_image" src="/image/yichang.png"></image>
+                <view class="land_sb">设备异常</view>
+              </view>
+            </view>
+            <view wx:else>
+              <image class="down" src="/image/botton.png"></image>
+            </view>
+          </view>
+        </view>
+        <view class="bottom" style="display:{{item.show}};">
+          <view wx:if="{{item.is_equipment == 1}}" class="shed clearfix">
+            <view class="title">— 当前棚内环境 —</view>
+            <view class="boll_li one">
+              <view class="ball">
+                <view class="ball_min">
+                  <view class="ball_min_p">
+                    <text>温度</text>
+                  </view>
+                  <view class="ball_min_p">
+                    <text>{{item.equipment.temperature}}℃</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="boll_li tow">
+              <view class="ball">
+                <view class="ball_min">
+                  <view class="ball_min">
+                    <view class="ball_min_p">
+                      <text>湿度</text>
+                    </view>
+                    <view class="ball_min_p">
+                      <text>{{item.equipment.humidity}}%</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="boll_li three">
+              <view class="ball">
+                <view class="ball_min">
+                  <view class="ball_min">
+                    <view class="ball_min_p">
+                      <text>光照</text>
+                    </view>
+                    <view class="ball_min_p">
+                      <text>{{item.equipment.light}}Lux</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="boll_li fore">
+              <view class="ball">
+                <view class="ball_min">
+                  <view class="ball_min">
+                    <view class="ball_min_p">
+                      <text>二氧化碳</text>
+                    </view>
+                    <view class="ball_min_p">
+                      <text>{{item.equipment.co2}}%</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="tips">可参照以上数据，对种植作物种类，适当控制浇水、卷帘等设施</view>
+
+          </view>
+
+          <view class="Intelligent_ventilation">
+            <view class="title">— 智能通风 —</view>
+            <!-- 自动 -->
+            <view class="automatic" wx:if="{{item.equipment.is_auto == is_auto}}">
+              <view class="top">
+                <view bindtap="change_automatic">
+                  <image class="zd_btn" src="/image/zidong.png"></image>
+                </view>
+                <view class="open_tuyere">
+
+                  <input class="num" type="text" value="30℃"></input>
+
+                  <view class="jian">
+                    <image class="jiantou" src="/image/lvjiantou.png"></image>
+                  </view>
+                  <view class="text">开风口</view>
+                  <text>棚内达到左框温度将会自动开启通风</text>
+                </view>
+                <view class="close_tuyere">
+                  <input class="num" type="text" value="30℃"></input>
+                  <view class="jian">
+                    <image class="jiantou" src="/image/heijiantou.png"></image>
+                  </view>
+                  <view class="text">闭风口</view>
+                  <text>棚内达到左框温度将会自动关闭通风</text>
+                </view>
+              </view>
+              <view class="explain">
+                操作说明：自动控制状态下可以控制其他操作，“手动控制状态下”无法操作，需点击“手动控制”切换到“自动控制”
+              </view>
+              <view>点击通风</view>
+              <view class="bottom">
+                <view class="Spread ">
+                  <view class="open">
+                    <view class="img">
+                      <image src="/image/huisanjiao.png"></image>
+                    </view>
+                    <text>铺开</text>
+                  </view>
+                  <view class="open">
+                    <view class="img">
+                      <image src="/image/huisanjiao.png"></image>
+                    </view>
+                    <text>铺开</text>
+                  </view>
+                </view>
+                <view class="Roll ">
+                  <view class="close">
+                    <view class="img">
+                      <image src="/image/huisanjiao.png"></image>
+                    </view>
+                    <text>铺开</text>
+                  </view>
+                  <view class="close">
+                    <view class="img">
+                      <image src="/image/huisanjiao.png"></image>
+                    </view>
+                    <text>铺开</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+
+            <!-- 手动 -->
+            <view class="manual" wx:if="{{item.equipment.is_auto == is_auto}}">
+              <view class="top">
+                <view bindtap="change_manual">
+                  <image class="zd_btn" src="/image/shoudong.png"></image>
+                </view>
+                <view class="open_tuyere">
+                  <input class="num" type="text" value="30℃"></input>
+                  <view class="jian">
+                    <image class="jiantou" src="/image/huijiantou.png"></image>
+                  </view>
+                  <view class="text">开风口</view>
+                  <text>棚内达到左框温度将会自动开启通风</text>
+                </view>
+                <view class="close_tuyere">
+                  <input class="num" type="text" value="30℃"></input>
+                  <view class="jian">
+                    <image class="jiantou" src="/image/huijiantou.png"></image>
+                  </view>
+                  <view class="text">闭风口</view>
+                  <text>棚内达到左框温度将会自动开启通风</text>
+                </view>
+              </view>
+              <view class="explain">
+                操作说明：自动控制状态下可以控制其他操作，“手动控制状态下”无法操作，需点击“手动控制”切换到“自动控制”
+              </view>
+              <view>通风</view>
+              <view class="bottom">
+                <view class="Spread ">
+                  <view class="open">
+                    <view class="img">
+                      <image src="/image/huisanjiao.png"></image>
+                    </view>
+                    <text>铺开</text>
+                  </view>
+                  <view class="open">
+                    <view class="img">
+                      <image src="/image/huisanjiao.png"></image>
+                    </view>
+                    <text>铺开</text>
+                  </view>
+                </view>
+                <view class="Roll ">
+                  <view class="close">
+                    <view class="img">
+                      <image src="/image/huisanjiao.png"></image>
+                    </view>
+                    <text>铺开</text>
+                  </view>
+                  <view class="close">
+                    <view class="img">
+                      <image src="/image/huisanjiao.png"></image>
+                    </view>
+                    <text>铺开</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+
+
+          </view>
+
+
+          <view wx:if="{{item.is_equipment == 1}}" class="equipment">
+            <view class="title">— 控制设备 —</view>
+            <view class="control_ul">
+              <view wx:for="{{item.control}}" wx:for-index="indexs" wx:key="indexs" wx:for-item="items" class="control_li">
+                <view class="top">{{items.action_name}}</view>
+                <view class="clearfix control_k">
+                  <view wx:for="{{items.content}}" wx:key="indexss" wx:for-index="indexss" wx:for-item="itemss">
+                    <view class="ulli">
+                      <view wx:if="{{item.equipment.is_longin != 1}}" class="nonemove">
+                        <view class="ullip">
+                          <image class="icon" src="{{itemss.icon}}"></image>
+                          <text>{{itemss.name}}</text>
+                        </view>
+                      </view>
+                      <view wx:else class="ullidiv" bindtap="move" data-landid="{{item.id}}" data-code="{{item.equipment_code}}" data-command="{{itemss.command}}" data-cropid="{{item.crop}}" data-action_content_id="{{itemss.id}}" data-actionid="{{items.action_id}}" data-eid="{{item.equipment.eid}}"
+                        data-msg="{{items.action_name}}" data-msgs="{{itemss.name}}" data-thisid="{{itemss.id}}" data-index="{{index}}" data-indexs="{{indexs}}" data-indexss="{{indexss}}" data-closeid="{{items.closeid}}">
+                        <view class="ullip">
+                          <image class="icon" src="{{itemss.icon}}"></image>
+                          <text>{{itemss.name}}</text>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view wx:if="{{item.source}}" class="source">
+            <view class="title">— 溯源体系 —</view>
+            <view class="source_ul">
+              <view wx:for="{{item.source}}" wx:key="index" wx:for-item="v" class="source_li">
+                <view class="source_p">{{v.action_name}}
+                  <text bindtap="source_start" data-landid="{{item.id}}" data-cropid="{{item.crop}}" data-actionid="{{v.action_id}}" class="start">打卡</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="qrcode" bindtap="qrcode" data-landid="{{item.id}}">点击申请二维码</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

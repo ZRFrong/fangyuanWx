@@ -1,0 +1,70 @@
+<!--pages/register/register.wxml-->
+<!--<view class="kongbao-head">
+	<view class="left-icon" bindtap="goback"></view>发布
+</view>-->
+<view class="pape" style="padding-top:180rpx;">
+	<form  bindsubmit="formSubmit" class="clearfix">
+		<view class="frame clearfix">
+			<view class="top clearfix">
+				<view class="location_view" style="display:{{location_show}};">
+					<image class="location_image" src="/image/img5.png"></image>
+					<text class="location">{{location}}</text>
+				</view>
+				<button class="release" form-type="submit">发布</button>
+			</view>
+			<view class="image clearfix" style="display:{{imagediv}};">
+				<view wx:for="{{imgarr}}" wx:key="index" class="imgdiv">
+					<text bindtap="clearimg" data-index="{{index}}">×</text>
+					<image mode="aspectFill" src="{{item}}"></image>
+				</view>
+			</view>
+			<view class="image clearfix"  style="display:{{videodiv}};">
+				<view class="imgdiv">
+					<text bindtap="clearvideo">×</text>
+					<video src="{{videopath}}" controls></video>
+				</view>
+			</view>
+			
+			<textarea name="content" class="textarea" bindblur="bindTextAreaBlur" auto-height="true"  placeholder="记录这一刻" maxlength="-1" style="max-height:{{textheight}}rpx;" value="{{textvalue}}" />
+			<view class="power_background" style="display:{{powershow}};" bindtap="closepower">
+				<view class="power" style="display:{{powershow}};" catchtap="bubbling">
+					<view>可见范围</view>
+					<radio-group name="power">
+					  <label class="checkbox">
+					    <radio class="radio" value="0" checked>
+		                    <text>所有人可见</text>
+		                </radio>
+					  </label>
+					  <label class="checkbox">
+					    <radio class="radio" value="1" >
+		                    <text>关注的人可见</text>
+		                </radio>
+					  </label>
+					  <label class="checkbox">
+					    <radio class="radio" value="2" >
+		                    <text>仅自己可见</text>
+		                </radio>
+					  </label>
+					  <label class="checkbox">
+					    <radio class="radio" value="3" >
+		                    <text>陌生人可见</text>
+		                </radio>
+					  </label>
+					</radio-group>
+				</view>
+			</view>
+			<view class="hot clearfix">
+				<view class="hotli" wx:for="{{hot}}" name="{{item.id}}" wx:key="index">#{{item.name}}<text  data-key="{{index}}" bindtap="clearhot">×</text></view>
+			</view>
+			<view class="tooldiv">
+				<view class="tool clearfix">
+					<view class="toolli"><image src="/image/img.png" data-num="{{imgarr.length}}" bindtap="chooseImage"></image><text>相册</text></view>
+					<view class="toolli"><image src="/image/img2.png" data-num="{{imgarr.length}}" bindtap="cameraImage"></image><text>拍摄</text></view>
+					<view class="toolli"><image src="/image/img3.png" bindtap="power"></image><text>权限</text></view>
+					<view class="toolli"><image src="/image/img4.png" bindtap="hot"></image><text>标签</text></view>
+					<view class="toolli"><image src="/image/img5.png" bindtap="openlocation"></image><text>位置</text></view>
+				</view>
+			</view>
+		</view>
+	</form>
+</view>

@@ -1,0 +1,99 @@
+<!--<view class="kongbao-head">
+	<view class="left-icon" bindtap="goback"></view>个人主页
+</view>-->
+<view class="header">
+	<image src="../../image/user_bg.jpg" class="header_bg"></image>
+	<image class="left-icon" bindtap="goback" src="../../image/left1.png"></image>
+	<image class="head" src="{{user.image}}"  binderror="picerror" mode="cover"></image>
+	<view class="info">
+		<view class="username">{{user.nickname}}</view>
+		<view class="mannum">
+			<text>粉丝     {{user.fansnum}}</text>
+			<text>关注     {{user.guanzhunum}}</text>
+		</view>
+	</view>
+</view>
+<view class="blogview">
+	<view wx:for="{{blog}}" wx:key="id" wx:for-index="index"  bindlongpress='longPress' data-userid='{{item.user_id}}' data-id="{{item.id}}">
+		<view class="main-1">
+		  <image class="touxiang fl" mode="aspectFill"  binderror="touerror" data-index="{{index}}" src="{{item.user.image}}"></image>
+		  <view class="fl main-1-center">
+		    <view class="lidama">{{item.user.nickname}}</view>
+		    <view class="shijian">{{item.addtime}}</view>
+		  </view>
+		  <view class="follow" bindtap="addFans" data-index="{{index}}" data-user="{{item.user_id}}" wx:if="{{item.user.is_fans == 0 && item.user_id != user_id}}">+关注</view>
+		  <view class="follow isfans" wx:if="{{item.user.is_fans == 1}}">你关注的人</view>
+		</view>
+		<view class="hot">
+			<view wx:for="{{item.hot}}" wx:key="id">
+				<view class="guangchangwu">#{{item.name}}</view>
+			</view>
+			<view class="wenzi" wx:if="{{item.turn.length == 0}}">{{item.content}}</view>
+			<view class="wenzi" wx:else>{{item.content}}//{{item.turn.content}}</view>
+		</view>
+		<view class="icon" wx:if="{{(item.media.length != 0 || item.turn.media.length != 0)&& item.mediatype == 'image'}}" >
+				<image  wx:if="{{item.is_turn == 0}}" wx:for="{{item.media}}" lazy-load="true" wx:for-item="v" wx:key="*this" wx:for-index="index" wx:if="{{index <= 2}}" bindtap="seeImg"  mode="aspectFill" src="{{v}}" data-img="{{v}}" data-arr="{{item.media}}" class="{{item.media_class}}"></image>
+				<image  wx:if="{{item.is_turn == 1}}" wx:for="{{item.turn.media}}"  lazy-load="true" wx:for-item="v" wx:key="*this" wx:for-index="index" wx:if="{{index <= 2}}" bindtap="seeImg"  mode="aspectFill" src="{{v}}" data-img="{{v}}" data-arr="{{item.turn.media}}" class="{{item.turn.media_class}}"></image>
+				<view wx:if="{{item.media.length > 3 && item.is_turn == 0}}"  bindtap="seeImg" data-img="{{item.media[2]}}" data-arr="{{item.media}}"class="mediabg">+{{item.media.length - 3}}</view>
+				<view wx:if="{{item.turn.media.length > 3 && item.is_turn == 1}}"  bindtap="seeImg" data-img="{{item.turn.media[2]}}" data-arr="{{item.turn.media}}"class="mediabg">+{{item.turn.media.length - 3}}</view>
+		</view>
+		<view class="icon" wx:if="{{(item.media.length != 0 || item.turn.media.length != 0)&& item.mediatype == 'video'}}" >
+			<video wx:if="{{item.is_turn == 0}}" src="{{item.media[0]}}"   controls></video>
+			<video wx:if="{{item.is_turn == 1}}" src="{{item.turn.media[0]}}" controls></video>
+		</view>
+		<view class="location_view" wx:if="{{item.address != ''}}">
+			<image  class="location_image" src="/image/img5.png"></image>
+			<text class="location">{{item.address}}</text>
+		</view>
+		<view class="fengxiang">
+		  <view class="fen-center">
+		    <view class="touch" bindtap="showturn" data-id="{{item.id}}" data-user="{{item.user_id}}" hover-class="hover" >
+		      <text class="fen-xue xb-1"></text>
+		      <text class="pinglun">{{item.turn_num}}</text>
+		    </view>
+		    <view class="touch" bindtap="showcomment" data-id="{{item.id}}"  hover-class="hover">
+		      <text class="fen-xue xb-2"></text>
+		      <text class="pinglun">{{item.comment_num}}</text>
+		    </view>
+		    <view class="touch">
+		    	<view class="dianzan"  bindtap="blogup" data-id="{{item.id}}" data-index="{{index}}" data-up="{{item.up}}" >
+		    		  <image wx:if="{{item.up == 0}}" class="fen-xue" src="/image/dianzan2.png"></image>
+				      <image wx:if="{{item.up == 1}}" class="fen-xue" src="/image/dianzan.png"></image>
+				      <text class="pinglun">{{item.up_num}}</text>
+		    	</view>
+		    </view>
+		  </view>
+		</view>
+		<view class="henggang"></view>
+	</view>
+</view>
+<view class="blognothing buttonnothing" style="display:{{dixian}};">我也是有底线的</view>
+<view class="comment" catchtouchmove="notouch"  bindtap="closeComment" style="display:{{comment}};">
+	<view class="comment_div" scroll-y="true" animation="{{ani}}" catchtap="notouch">
+		<view class="comment_top">{{comment_num}}条回复<text bindtap="closeComment">×</text></view>
+		<scroll-view class="list"  scroll-y="true" bindscrolltolower="touchButtom" lower-threshold="100">
+			<view wx:if="{{comment_num == 0}}" class="nothing">暂无评论，来抢沙发</view>
+			<view wx:for="{{comment_list}}" wx:key="id" wx:for-index="index" bindlongpress="delcomment" bindtap="toSpend" data-id="{{item.id}}" data-userid="{{item.user_id}}" data-nickname="{{item.user.nickname}}" class="list_li clearfix">
+				<image class="pic" mode="aspectFill" src="{{item.user.image}}"></image>
+				<view class="show">
+					<view class="title" wx:if="{{item.parent_id == 0}}">{{item.user.nickname}}</view>
+					<view class="title" wx:else>{{item.user.nickname}}回复了{{item.parent.nickname}}</view>
+					<view class="content">{{item.content}}</view>
+					<view class="time">{{item.addtime}}</view>
+				</view>
+				<view class="up">
+					<image wx:if="{{item.up == 1}}" src="/image/dianzan.png" bindtap="commentUp" data-user="{{item.user_id}}" data-index="{{index}}" data-num="{{item.up_num}}" data-up="{{item.up}}" data-id="{{item.id}}" ></image>
+					<image wx:if="{{item.up == 0}}" src="/image/dianzan2.png" bindtap="commentUp" data-user="{{item.user_id}}"  data-index="{{index}}" data-num="{{item.up_num}}" data-up="{{item.up}}" data-id="{{item.id}}" ></image>
+					<text>{{item.up_num}}</text>
+				</view>
+			</view>
+			<view class="buttonnothing" style="display:{{comment_dixian}};">我也是有底线的</view>
+		</scroll-view>
+		<view class="writeComment">
+			<form bindsubmit="commentSubmit"  data-blogid="{{nowblog_id}}" data-pid="{{pid}}" data-puid="{{puid}}">
+				<input name="content" value="{{commentcontent}}" placeholder="{{placeholder}}" placeholder-class="placeholder" focus="{{inputfocus}}" bindblur="blurComment" confirm-type="done" />
+				<button class="send" form-type="submit" >发送</button>
+			</form>
+		</view>
+	</view>
+</view>

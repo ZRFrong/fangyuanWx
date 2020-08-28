@@ -1,0 +1,44 @@
+<!--pages/register/register.wxml-->
+<view class="kongbao-head">
+	<view class="left-icon" bindtap="goback"></view>我的相册
+</view>
+<view class="pape clearfix">
+	<view class="clearfix" wx:for="{{photo}}" wx:key="index">
+		<view class="left">
+			<view>{{item.time_md}}</view>
+			<view>{{item.time_y}}</view>
+		</view>
+		<view class="right clearfix">
+			<view class="dian"></view>
+			<view wx:if="{{item.img.length != 0}}">
+				<view class="over" wx:if="{{item.img.length == 1}}">
+					<image wx:for="{{item.img}}" wx:key="indexs" wx:for-item="v" src="{{v}}" mode="aspectFill" class="num_1" data-img="{{v}}" data-arr="{{item.img}}"  bindtap="seeImg" ></image>
+				</view>
+				<view class="over"  wx:if="{{item.img.length == 2}}">
+					<image wx:for="{{item.img}}" wx:key="indexs" wx:for-item="v" src="{{v}}" mode="aspectFill" class="num_2"  data-img="{{v}}" data-arr="{{item.img}}"  bindtap="seeImg" ></image>
+				</view>
+				<view class="over"  wx:if="{{item.img.length == 3}}">
+					<image src="{{item.img[0]}}" mode="aspectFill" class="num_3"  data-img="{{v}}"  data-arr="{{item.img}}" bindtap="seeImg"></image>
+					<view class="num_3_view">
+						<image wx:for="{{item.img}}"  wx:key="indexs" wx:for-item="v" wx:for-index="indexs" wx:if="{{indexs > 0}}" src="{{v}}" mode="aspectFill" class="num_3a"  data-img="{{v}}" data-arr="{{item.img}}" bindtap="seeImg" ></image>
+					</view>
+				</view>
+				<view class="over"  wx:if="{{item.img.length == 4}}">
+					<image wx:for="{{item.img}}" wx:key="indexs" wx:for-item="v" src="{{v}}" mode="aspectFill" class="num_4"  data-img="{{v}}" data-arr="{{item.img}}" bindtap="seeImg"></image>
+				</view>
+				<view class="over"  wx:if="{{item.img.length == 5}}">
+					<image src="{{item.img[0]}}" mode="aspectFill" class="num_5" data-arr="{{item.img}}" bindtap="seeImg" ></image>
+					<view class="num_5_view">
+						<image wx:for="{{item.img}}"  wx:key="indexs" wx:for-item="v" wx:for-index="indexs" wx:if="{{indexs > 0}}" src="{{v}}" mode="aspectFill" class="num_5a"  data-img="{{v}}" data-arr="{{item.img}}" bindtap="seeImg" ></image>
+					</view>
+				</view>
+				<view class="over"  wx:if="{{item.img.length >= 6}}">
+					<image wx:for="{{item.img}}" wx:key="indexs" wx:for-item="v" src="{{v}}" mode="aspectFill" class="num_6"  data-img="{{v}}" data-arr="{{item.img}}" bindtap="seeImg" ></image>
+				</view>
+			</view>
+			<view wx:if="{{item.video.length != 0}}">
+				<video  wx:for="{{item.video}}" wx:key="indexs" wx:for-item="v" src="{{v}}" class="num_1"></video>
+			</view>
+		</view>
+	</view>
+</view>

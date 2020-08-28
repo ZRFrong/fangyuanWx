@@ -1,0 +1,38 @@
+<view class="kongbao-head">
+	<view class="left-icon" bindtap="goback"></view>企业名称
+</view>
+<form bindsubmit="submitform">
+	<view class="pape">
+	  <view class="tudidaxiao">
+	    <text class="xiangxi">企业名称</text>
+	    <input name="company" value="{{company}}" placeholder="请输入"></input>
+	  </view>
+	  <view class="xiangxi">详细地址</view>
+	  <view class="shuru">
+	    <input name="address" value="{{address}}" placeholder="请输入详细地址信息"></input>
+	  </view>
+	  <view class="tudidaxiao">
+	    <text class="title">品牌名</text>
+	    <input name="brand_name" value="{{brand_name}}" placeholder="请输入"></input>
+	  </view>
+	  <view class="tudidaxiao">
+	    <text class="title">经营范围</text>
+	    <input name="range" value="{{range}}" placeholder="请输入"></input>
+	  </view>
+	  <view class="tudidaxiao">
+	    <text class="title">营业执照</text>
+	    <image class="addphoto" bindtap="chooseImage" data-type="1" src="{{photo1}}" />
+	  </view>
+	  <view class="tudidaxiao">
+	    <text class="title">产品照片</text>
+	    <image class="addphoto" bindtap="chooseImage" data-type="2" src="{{photo2}}" />
+	  </view>
+	  <view class="tudidaxiao" style="border:none;">
+	    <text class="title">生产许可证书</text>
+	    <image class="addphoto" bindtap="chooseImage" data-type="3" src="{{photo3}}" />
+	  </view>
+	  <input type="text" name="id" value="{{id}}" style="display:none;" />
+	  <button form-type="submit" class="wancheng">完成</button>
+	  <view class="konger"></view>
+	</view>
+</form>

@@ -1,0 +1,17 @@
+.img{width:100vw;height:250rpx;}
+.ul{background:rgb(241,241,241);}
+.li{width:90%;padding:0 5%;background:#fff;margin-bottom:20rpx;}
+.header{height:80rpx;line-height:80rpx;}
+.header-left{width:80rpx;position:absolute;height:80rpx;}
+.banyuan{position:absolute;height:100%;width:80rpx;}
+.xuhaoview{position:absolute;width:100%;height:100%;z-index:2;text-align:center;line-height:80rpx;}
+.xuhao{color:#fff;}
+.title{padding-left:120rpx;}
+.tip{float:right;color:green;margin-right:20rpx;}
+.radio{transform:scale(0.8);margin-left:-60rpx;}
+.radiostyle{color:rgb(175,175,175);width:97vw;margin-left:20rpx;border-bottom:1px solid #eee;padding:20rpx 0;}
+.radio:last-child .radiostyle{border:none;}
+.inputstyle{color:rgb(175,175,175);width:83.25vw;margin-left:84rpx;font-size:26rpx;}
+.submit{margin-top:20rpx;padding:40rpx 0;}
+.dosubmit{background:linear-gradient(to right, rgb(99,223,168), rgb(47,201,132));border:none;width:300rpx;color:#fff;font-weight:700;border-radius:45px;}
+.placeholder-class{color:rgb(175,175,175);}

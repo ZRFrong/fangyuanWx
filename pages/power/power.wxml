@@ -1,0 +1,9 @@
+<view class="kongbao-head"></view>
+<view class="pape">
+  <view class="biaoti">授权</view>
+  <view class="logo">
+    <image src="/image/logo.png" class="yuan"></image>
+    <view class="shuoming">请先授权登录</view>
+  </view>
+  <button class="qurren" open-type="getUserInfo"  bindgetuserinfo='bindGetUserInfo'>立即授权</button>
+</view>

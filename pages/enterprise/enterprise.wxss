@@ -1,0 +1,167 @@
+/* pages/enterprise/enterprise.wxss */
+.head{
+  line-height: 79rpx;
+  width: 100%;
+  background-color: #49eebb;
+  text-align: center;
+  color: #ffffff;
+  font-size: 30rpx;
+}
+
+.tudidaxiao{
+  line-height: 75rpx;
+  width: 690rpx;
+  margin: 0 auto;
+  border-bottom: 1rpx solid #e9e9e9;
+}
+
+.m-t-50{
+  margin-top: 50rpx;
+}
+
+.m-t-30{
+  margin-top: 30rpx;
+}
+
+
+.tudidaxiao input{
+  width: 215rpx;
+  float: right;
+  margin-top: 13rpx;
+  color: #b8b8b8;
+  font-size: 32rpx;
+}
+
+.suozaidiqu{
+  width: 690rpx;
+  height: 70rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+
+.xuebi{
+  display: inline-block;
+  width: 27rpx;
+  height: 16rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAQCAYAAADnEwSWAAABDUlEQVQ4jbWUIWhCURiFP1BhxSAGUSy2gdkgY8Vg0SK2KawZDCIsLJscCyaTBoNtRVgQg3mMwYwigsG4YVgSTVr+iz9O1KvvnXTv/c85373hPQ/QAEbAEvfUAPwAG2AG+FwC9YXxDtCVzZcLoI50fwORffrAQVBTOueAZ3/4KcM3B0A16VoAwUMGLzAWU+sKUEU61kDsmDEA/Ir59QLQg2Q3QPycQBj4kcCzBSirQHc2N4wCKwmWz/CnFShlAzK6VQWPR3wJ5ctfAjK6V0WZA/OYmpeuARnlVGFSnYeAPzl/cgJkVFRA893MZV93EmRUlfIp8CHrthsgoxd2L+zZhv/9s05oCNwAE6BgC9sCUU9Hwlr24LoAAAAASUVORK5CYII=) no-repeat;
+  background-size: 100% 100%;
+  margin-left: 17rpx;
+}
+
+.qingxuangze{
+  color: #b1b1b1;
+  font-size: 32rpx;
+}
+
+.suozaidi{
+  color: #262626;
+  font-size: 36rpx;
+}
+
+.diyu{
+  width: 690rpx;
+  line-height: 58rpx;
+  border-bottom: 1rpx solid #e9e9e9;
+  font-size: 34rpx;
+  margin: 0 auto;
+}
+
+.qingdian{
+  position: absolute;
+  top: 45%;
+  right: 4%;
+}
+
+.left-1{
+  margin-left: 10rpx;
+}
+
+.xiangxi{
+  width: 690rpx;
+  height: 70rpx;
+  margin: 0 auto;
+  margin-top: 48rpx;
+  color: #262626;
+  font-size: 36rpx;
+}
+
+.shuru{
+  height: 60rpx;
+  width: 690rpx;
+  margin: 0 auto;
+  border-bottom: 1rpx solid #e9e9e9;
+}
+
+.shuru input{
+  color: #b0b0b0;
+  font-size: 32rpx;
+}
+
+.ditu{
+  width: 690rpx;
+  height: 357rpx;
+  border: 1rpx solid #d4d4d4;
+  margin: 0 auto;
+  border-radius: 15rpx;
+}
+
+.huoqujinwei{
+  width: 690rpx;
+  height: 56rpx;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  border-bottom: 1rpx solid #e9e9e9;
+}
+
+.huoqujinwei-text{
+  font-size: 26rpx;
+  color: #282828;
+}
+
+.jinwei{
+  display: inline-block;
+  width: 220rpx;
+  line-height: 34rpx;
+  border-radius: 10rpx;
+  background-color: #7d7d7d;
+  color: #ffffff;
+  font-size: 20rpx;
+  text-align: center;
+  margin-left: 50rpx;
+}
+
+.shamngv{
+  width: 690rpx;
+  height: 345rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+
+.shangkesf{
+  width: 50%;
+  height: 100%;
+  background-color: #f8f8f8;
+  border: 1rpx solid #d1d1d1;
+  border-radius: 15rpx;
+}
+
+.kong{
+  height: 25rpx;
+  width: 690rpx;
+  border-bottom: 1rpx solid #e9e9e9;
+  margin: 0 auto;
+}
+
+.wancheng{
+  width: 690rpx;
+  line-height: 80rpx;
+  background-color: #20e0a4;
+  color: #ffffff;
+  font-size: 36rpx;
+  border-radius: 60rpx;
+  margin-top: 105rpx;
+}
+
+.konger{
+  height: 100rpx;
+}

@@ -1,0 +1,16 @@
+<!--<view class="kongbao-head">
+	<view class="left-icon" bindtap="goback"></view>系统消息
+</view>-->
+<view class="pape" style="min-height:100vh;">
+	<view class="li" wx:if="{{nothing == 'none'}}" wx:for="{{message}}" wx:key="index">
+		<view class="timeview">
+			<text class="time">{{item.addtime}}</text>
+		</view>
+		<view class="message">
+			<view class="title">{{item.title}}</view>
+			<view class="content">{{item.content}}</view>
+		</view>
+	</view>
+	<image wx:if="{{nothing == 'block'}}" style="display:block;margin:200rpx auto 0;width:500rpx;height:500rpx;" src="../../image/nothing.jpg"></image>
+	<view class="nothing" style="display:{{dixian}};">{{tishi}}</view>
+</view>

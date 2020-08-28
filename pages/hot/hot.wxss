@@ -1,0 +1,7 @@
+.search{padding:0 5%;position:relative;}
+.search input{width:430rpx;height:46.5rpx;min-height:46.5rpx;border:1px solid #4fe596;border-radius:45px;padding:0 60rpx;color:#4fe596;font-size:26rpx;float:left;}
+.search image{width:25rpx;height:24rpx;position:absolute;top:50%;margin-top:-12rpx;left:calc(5% + 20rpx);}
+.search .search_button{width:106rpx;height:46.5rpx;line-height:46.5rpx;font-size:26rpx;text-align:center;float:right;border:1px solid #4fe596;border-radius:30px;color:#4fe596;padding:0;box-sizing:initial;background:transparent;}
+.list{font-size:26rpx;padding:20rpx 5%;}
+.list .top{font-size:30rpx;padding:30rpx 0 10rpx;}
+.list .li{padding:20rpx 0 0 20rpx;}

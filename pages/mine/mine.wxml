@@ -1,0 +1,63 @@
+<!--pages/mine/mine.wxml-->
+<view class="kongbao-head"></view>
+<view class="pape">
+  <view class="head-bj">
+    <image src='/image/bj.png'></image>
+  </view>
+  <view class="head-youxiang">
+    <view class="head-tou">
+    	<image wx:if="{{user.user != 0}}" bindtap="means" class="userinfo-avatar" src="{{user.user.image}}" mode="cover"></image>
+    	<image wx:else class="userinfo-avatar"  bindtap="login" src="/image/tou.png" mode="cover"></image>
+    </view>
+    <view wx:if="{{user.user != 0}}" class="userinfo-nickname">{{user.user.nickname}}</view>
+    <view wx:else class="userinfo-nickname" bindtap="login">点击登录</view>
+  <view class="nav">
+    <view class="nav-1" bindtap="openuser">
+      <view class="shuzi">{{user.blog}}</view>
+      <text class="mingzi">动态</text>
+    </view>
+    <view class="nav-1" bindtap="attention">
+      <view class="shuzi">{{user.attention}}</view>
+      <text  class="mingzi">关注</text>
+    </view>
+    <view class="nav-1" bindtap="fans">
+      <view class="shuzi">{{user.fans}}</view>
+      <text class="mingzi">粉丝</text>
+    </view>
+  </view>
+  </view>
+  <view class="dingxi">
+    <view class="dingxi-center">
+      <view class="nav-2" bindtap="photos">
+      <image class="nav-xuebitu" src="/image/xiangce.png"></image>
+      <view class="wodedongxi">我的相册</view>
+    </view>
+    <view class="nav-2" bindtap="company">
+      <image class="nav-xuebitu" src="/image/qy.png"></image>
+      <view class="wodedongxi">我的企业</view>
+    </view>
+    <view class="nav-2" bindtap="land">
+      <image class="nav-xuebitu" src="/image/nongtian.png"></image>
+      <view class="wodedongxi">智慧农业</view>
+    </view>
+    <view class="nav-2" bindtap="upnum">
+      <image class="nav-xuebitu" src="/image/zan.png"></image>
+      <view class="wodedongxi">我的赞</view>
+    </view>
+    </view>
+  </view>
+  <view class="list">
+	  <view class="jifei" bindtap="qecodelist">
+  		<image class="jiaofeixue" src="/image/ewm.png"></image>
+	    <text class="jiaofei">下载溯源二维码</text>
+	    <text class="jiaofeiright"></text>
+	  </view>
+  </view>
+  <view class="list">
+	  <view class="jifei" bindtap="shouhuo">
+  		<image class="jiaofeixue" src="/image/shouhuo.png"></image>
+	    <text class="jiaofei">农产品收获</text>
+	    <text class="jiaofeiright"></text>
+	  </view>
+  </view>
+</view>

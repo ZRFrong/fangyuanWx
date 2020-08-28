@@ -1,0 +1,12 @@
+var sub = function (str ) {
+  if (str.length == 0 || str == undefined) {
+    return "";
+  }else{
+  	var a = str.length - 5;
+  	return str.substring(a,str.length);
+  }
+  
+}
+module.exports = {
+  sub: sub
+}

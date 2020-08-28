@@ -1,0 +1,13 @@
+<view class="bg">
+	<view class="kongbao-head">
+		<view class="left-icon" bindtap="goback"></view>下载二维码
+	</view>
+	<view class="pape">
+		<view bindlongpress="bindlongpress" bindtap="qrcode" data-id="{{item.id}}" class="touch-item" wx:for="{{list}}" wx:key="id">
+	  		<view class="content">
+	    		<text class="dlf"></text>
+	  			{{item.id}}#{{item.crop}}
+	  		</view>
+		</view>
+	</view>
+</view>

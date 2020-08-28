@@ -1,0 +1,49 @@
+<!--pages/means/means.wxml-->
+<view class="kongbao-head">
+	<view wx:if="{{my == 1}}">
+		<view class="left-text" bindtap="goback" >跳过</view>个人资料
+	</view>
+	<view wx:else>
+		<view class="left-icon" bindtap="goback"></view>个人资料
+	</view>
+</view>
+<view class="pape">
+	<form bindsubmit="formSubmit">
+		<view class="logo">
+			<image src="{{pic}}" class="yuan" bindtap="uppic"></image>
+			<input name="image" style="display:none;" value="{{pic}}" ></input>
+			<view class="shuoming">点击上传头像</view>
+		</view>
+		<view class="xingming">
+			<text class="qianyou">姓名</text>
+			<input name="username" value="{{username}}" placeholder="请输入真实姓名"></input>
+		</view>
+		<view class="xingming" style="margin-top:34rpx;">
+			<text class="qianyou">昵称</text>
+			<input name="nickname" value="{{nickname}}" placeholder="请输入昵称"></input>
+		</view>
+		<view class="xingbie">
+			<text class="qianyou">性别</text>
+			<radio-group name="sex" class="danxuan">
+				<radio value="0" checked="{{a_checked}}">保密</radio>
+				<radio value="1" checked="{{b_checked}}">男</radio>
+				<radio value="2" checked="{{c_checked}}">女</radio>
+			</radio-group>
+		</view>
+		<view class="xingbie">
+			<text class="qianyou">年龄</text>
+			<view style="float:right;">
+				<picker name="birthday" mode="date" value="{{birthday}}"  bindchange="bindDateChange">
+					<text class="picker">{{date}}</text>
+					<text class="qingxuangze">{{xz}}</text>
+					<text class="xuebi"></text>
+				</picker>
+			</view>
+		</view>
+		<view class="xingming" style="margin-top:34rpx;">
+			<text class="qianyou">签名</text>
+			<input name="sign" value="{{sign}}" placeholder="请输入个性签名"></input>
+		</view>
+		<button class="qurren"  formType="submit">确认</button>
+	</form>
+</view>
